@@ -79,6 +79,9 @@
   animation: typing-cursor 0.5s ease-in-out infinite;
 }
 
+
+
+
 @keyframes typing {
   from {
     width: 0;
@@ -97,6 +100,37 @@
   }
 }
 
+/* Base styles */
+.typing-text {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 2px solid black;
+  white-space: nowrap;
+  animation: typing 4s steps(30, end), typing-cursor 0.75s step-end infinite;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+  .typing-text {
+    font-size: 1.5em;
+    animation-duration: 5s; /* Slower animation for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .typing-text {
+    font-size: 1.2em;
+    animation-duration: 6s;
+  }
+}
+
+@media (max-width: 480px) {
+  .typing-text {
+    font-size: 1em;
+    animation-duration: 7s;
+  }
+}
+
 
 /* project image zoom effect */
 
@@ -112,13 +146,13 @@
 
 
 .image-wrapper {
-  position: relative; /* Ensure the wrapper div is positioned relative to its container */
-  margin-top: 100px; /* Adjust this value according to your navbar height */
+  position: relative; 
+  margin-top: 100px; 
 }
 
 .profile-image {
-  max-width: 80%; /* Ensure the image scales within its container */
-  display: block; /* Remove any default inline styling */
+  max-width: 80%;
+  display: block; 
 }
 
 
@@ -139,9 +173,16 @@
   opacity: 1; 
 }
 
+.btn-primary:hover {
+            transform: scale(1.05); 
+        }
+.btn-white:hover {
+            transform: scale(1.05); 
+}
 
-
-
+.btn {
+    transition: transform 0.5s ease, background-color 0.3s ease;
+}
 
 </style>
 
@@ -196,9 +237,9 @@
 	  
 					  // Create an array of typing text
 					  const typingTexts = [
-						'Student  ',
-						'Aspiring Data Analyst  ',
-						'Hardworking   ',
+						'Analytical  ',
+						'Innovative    ',
+						'Meticulous   ',
 					  ];
 	  
 					  // Create a function to display the typing animation for a given text
@@ -224,7 +265,7 @@
 	  
 					<br>
 					<br>
-					<h2>An Aspiring Data Analyst</h2>
+					<h2>Data Analysis Expert</h2>
 					<p>
 					  <a href="https://www.linkedin.com/in/amit-yadav-417bb5288?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BymrqsE%2FjQnWvGHVPmZrxgA%3D%3D"
 						class="btn btn-primary py-3 px-4">Linkedin</a>
@@ -253,16 +294,16 @@
 								<div class="row">
 									<div class="col-sm-6 col-md-5">
 									  <div class="about-img">
-										<img src="images/about me_amit.jpg" class="img-fluid rounded b-shadow-a" alt="">
+										<img src="images/Amit's Photo-photoaidcom-cropped.jpg" class="img-fluid rounded b-shadow-a" alt="">
 									  </div>
 									</div>
 									<!-- Details next to profile image -->
 									<div class="col-sm-6 col-md-7">
 									  <div class="about-info">
 										<p><span class="title-s">Name: </span> <span>Amit Yadav</span></p>
-										<p><span class="title-s">Job Role: </span> <span> Data Scientist & Analysis</span></p>
+										<p><span class="title-s">Job Role: </span> <span> Data Analysis & Business Analysis</span></p>
 										<p><span class="title-s">Experience: </span> <span>6 Months</span></p>
-										<p><span class="title-s">Address: </span> <span>Ayodhya, India</span></p>
+										<p><span class="title-s">Address: </span> <span>Basti, India</span></p>
 									  </div>
 									</div>
 								  </div>
@@ -271,13 +312,13 @@
 									<p class="title-s">Skills</p>
 									<span>SQL</span> <span class="pull-right">70%</span>
 									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="95" aria-valuemin="0"
+										<div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="95" aria-valuemin="0"
 											aria-valuemax="100"></div>
 									</div>
 
-									<span>POWER BI</span> <span class="pull-right">90%</span>
+									<span>POWER BI</span> <span class="pull-right">80%</span>
 									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="85" aria-valuemin="0"
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="85" aria-valuemin="0"
 											aria-valuemax="100"></div>
 									</div>
 									
@@ -287,21 +328,21 @@
 											aria-valuemax="100"></div>
 									</div>
 									
-									<span>Data Visualization</span> <span class="pull-right">90%</span>
+									<span>Tableau</span> <span class="pull-right">70%</span>
 									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+										<div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="90" aria-valuemin="0"
 											aria-valuemax="100"></div>
 									</div>
 									
-									<span>Google Analytics</span> <span class="pull-right">70%</span>
+									<span>Advance Excel</span> <span class="pull-right">70%</span>
 									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="85" aria-valuemin="0"
+										<div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="85" aria-valuemin="0"
 											aria-valuemax="100"></div>
 									</div>
 									
 									<span>Machine Learning</span> <span class="pull-right">60%</span>
 									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="80" aria-valuemin="0"
+										<div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="80" aria-valuemin="0"
 											aria-valuemax="100"></div>
 									</div>
 								</div>
@@ -316,10 +357,10 @@
 								<h1 class="big">About</h1>
 								<h2 class="mb-4">About Me</h2>
 								
-								<p>As a student of computer science with a strong aspiration to become a skilled data analyst, I have already gained 3 months of hands-on experience in the field. My proficiency extends to a range of tools and technologies, including Python, Power BI, Cognos, SQL, and machine learning. I have successfully created projects using Excel and Cognos, showcasing my ability to work with data across different platforms and tools.</p>
+								<p>I am an aspiring data analyst with expertise in advanced Excel, SQL, Power BI, Tableau, and machine learning. Recognized as a Data Analyst Top Voice on LinkedIn, I am passionate about leveraging data to uncover insights and drive strategic decision-making. My goal is to apply these skills to solve complex problems and make meaningful contributions to data-driven projects.</p>
 								<ul class="about-info mt-4 px-md-0 px-2">
-									<li class="d-flex"><span>Profile:</span> <span>Data Science &amp; Analytics &amp; business analytics</span></li>
-									<li class="d-flex"><span>Domain:</span> <span>Retail, E-commerce, BFSI &amp; Banking , Engineering</span></li>
+									<li class="d-flex"><span>Profile:</span> <span>Data Analytics &amp; Business analytics</span></li>
+									<li class="d-flex"><span>Domain:</span> <span>Retail, E-commerce, Healthcare &amp; Banking , Engineering</span></li>
 									<li class="d-flex"><span>Education:</span> <span>Bachelor of Engineering</span></li>
 									<li class="d-flex"><span>Language:</span> <span>English, Hindi, Gujarati</span></li>
 									<li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI, Advance Excel, Python, SQL,Tableau</span></li>
@@ -366,34 +407,50 @@
 		<br>
 		
 		<div class="row">
-    <div class="col-md-6">
-        <div class="resume-wrap ftco-animate">
-            <span class="date">2023 - DEC</span>
-            <h2>Machine-Learning</h2>
-            <span class="position">Atharvo</span>
-            <p class="mt-4">Atharvo</p>
-            <ul>
-                <li>Acquired hands-on experience in machine learning through projects focusing on data preprocessing, model training, and evaluation.</li>
-                <li>Strengthened skills in data analysis and optimization techniques.</li>
-                <li>Applied machine learning algorithms to real-world datasets, enhancing practical knowledge in the field.</li>
-            </ul>
-        </div>
-    </div>
-    <div class="col-md-6">
-        <div class="resume-wrap ftco-animate">
-            <span class="date">2024-JULY</span>
-            <h2>Business Analysis</h2>
-            <span class="position">YBI Foundation</span>
-            <p class="mt-4">YBI Foundation, specializing in business analysis, provided valuable insights into business processes and strategies.</p>
-            <ul>
-                <li>Engaged in analyzing business data to optimize operations and decision-making.</li>
-                <li>Utilized analytical tools to extract meaningful insights for improving business performance.</li>
-                <li>Contributed to project teams by providing data-driven recommendations and solutions.</li>
-            </ul>
-        </div>
-    </div>
-</div>
+			<div class="col-md-6">
+				<div class="resume-wrap ftco-animate">
+					<span class="date">August 24 - September 24 </span>
+					<h2>Business Analyst</h2>
+					<span class="position">KultureHire Tech Private limited</span>
+					<p class="mt-4">At KultureHire, I gained valuable insights into business processes and strategies, which helped me sharpen my skills in data analysis.</p>
+					<ul>
+						<li>Worked on an unguided project titled "Career Aspirations of Gen Z," using Excel, SQL, and Power BI..</li>
+						<li>Analyzed survey data to extract insights into Gen Z career preferences, retention strategies, and technology usage.</li>
+						<li>Developed dashboards and reports to present findings.</li>
+					</ul>
+				</div>
+			</div>
 
+			<div class="col-md-6">
+				<div class="resume-wrap ftco-animate">
+					<span class="date">June 24 - July 24</span>
+					<h2>Business Analyst</h2>
+					<span class="position">YBI Foundation</span>
+					<p class="mt-4">YBI Foundation, specializing in business analysis, provided valuable insights into business processes and strategies.</p>
+					<ul>
+						<li>Engaged in analyzing business data to optimize operations and decision-making.</li>
+						<li>Utilized analytical tools to extract meaningful insights for improving business performance.</li>
+						<li>Contributed to project teams by providing data-driven recommendations and solutions.</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="col-md-6">
+
+                <div class="resume-wrap ftco-animate">
+					<span class="date">December 24 - January 24</span>
+					<h2>Machine-Learning</h2>
+					<span class="position">Atharvo</span>
+					<p class="mt-4">Atharvo</p>
+					<ul>
+						<li>Acquired hands-on experience in machine learning through projects focusing on data preprocessing, model training, and evaluation.</li>
+						<li>Strengthened skills in data analysis and optimization techniques.</li>
+						<li>Applied machine learning algorithms to real-world datasets, enhancing practical knowledge in the field.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
 
 		<br>
 		<br>
@@ -426,7 +483,7 @@
 
     		<div class="row justify-content-center mt-5">
     			<div class="col-md-6 text-center ftco-animate">
-    				<p><a href="https://drive.google.com/file/d/1_dyIxVf9bAsXadnNkVHvEGioM4tJIjVf/view?usp=sharing">Download CV</a></p>
+    				<p><a href="https://drive.google.com/file/d/1Q95e0RggBuhPAGuJTv5ENLyrTq1F7o7s/view?usp=sharing" class="btn btn-primary py-4 px-5">Download CV</a></p>
     			</div>
     		</div>
     	</div>
@@ -445,8 +502,7 @@
         </div>
         <div class="row d-flex">
 
-
-	<div class="col-md-4 d-flex ftco-animate">
+			<div class="col-md-4 d-flex ftco-animate">
 				<div class="blog-entry justify-content-end">
 				<a href="https://github.com/Amityadav10x/Power-BI-Projects/tree/4485d00f77358339af3c8a6a41f8f5c75a73e6b7/AtiliQ%20Motors%20Sales%20Analysis" class="block-20 zoom-effect" style="background-image: url('images/State\ Wise.png');">
 				</a>
@@ -457,30 +513,46 @@
 				</div>
 			  </div>
 			</div>
-		
+
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
-              <a href="https://github.com/Amityadav10x/Power-BI-Projects/tree/bec492d5c2d1be1992473d415049f9af74e39ca9/Hotel%20Revenue%20and%20Booking%20Analysi" class="block-20 zoom-effect" style="background-image: url('images/Hotel_dash.png');">
+              <a href="https://github.com/Amityadav10x/Power_BI_Projects/tree/99afe2d6bae231ca3288b3070d8ab0d48e3b5249/Hospitality_Domain" class="block-20 zoom-effect" style="background-image: url('images/Hotel_dash.png');">
               </a>
               <div class="text mt-3 float-right d-block">
 
-                <h3 class="heading"><a href="https://github.com/Amityadav10x/Power-BI-Projects/tree/bec492d5c2d1be1992473d415049f9af74e39ca9/Hotel%20Revenue%20and%20Booking%20Analysi">Hotel business insights</a></h3>
+                <h3 class="heading"><a href="https://github.com/Amityadav10x/Power_BI_Projects/tree/99afe2d6bae231ca3288b3070d8ab0d48e3b5249/Hospitality_Domain">Hotel operations insights</a></h3>
                 <p>Leveraged Power BI for data-driven hotel improvements. Analyzed guest satisfaction, operations, and revenue. Identified booking trends, service gaps, and optimized pricing strategies.</p>
               </div>
             </div>
           </div>
 
-	<div class="col-md-4 d-flex ftco-animate">
+
+
+		  <div class="col-md-4 d-flex ftco-animate">
 			<div class="blog-entry justify-content-end">
-			<a href="https://github.com/Amityadav10x/Power-BI-Projects/tree/bec492d5c2d1be1992473d415049f9af74e39ca9/Blinkit_Store_Analysis" class="block-20 zoom-effect" style="background-image: url('images/blinkit_Dashboard.png');">
+			<a href="https://github.com/Amityadav10x/Power_BI_Projects/tree/a08fa07b914d5a23eedc31ef94e91ac7dfdcf6f1/Blinkit_Store_Analysis" class="block-20 zoom-effect" style="background-image: url('images/blinkit_Dashboard.png');">
 			</a>
 			<div class="text mt-3 float-right d-block">
 
-			  <h3 class="heading"><a href="https://github.com/Amityadav10x/Power-BI-Projects/tree/bec492d5c2d1be1992473d415049f9af74e39ca9/Blinkit_Store_Analysis">blinkit Stores data Analysis</a></h3>
+			  <h3 class="heading"><a href="https://github.com/Amityadav10x/Power_BI_Projects/tree/a08fa07b914d5a23eedc31ef94e91ac7dfdcf6f1/Blinkit_Store_Analysis">blinkit Stores data Analysis</a></h3>
 			  <p>This Power BI dashboard provides an in-depth analysis of sales data for Blinkit, focusing on various aspects such as item type performance, outlet performance, customer ratings, and sales trends over time.</p>
 			</div>
 		  </div>
-	</div>
+		</div>
+
+		<div class="col-md-4 d-flex ftco-animate">
+			<div class="blog-entry justify-content-end">
+			<a href="https://github.com/Amityadav10x/Power_BI_Projects/tree/cde104a8d5c12579527119817ef7008282fbe14b/Healthcare_Provider_Data_Analysis" class="block-20 zoom-effect" style="background-image: url('images/dashboard2.png');">
+			</a>
+			<div class="text mt-3 float-right d-block">
+
+			  <h3 class="heading"><a href="https://github.com/Amityadav10x/Power_BI_Projects/tree/cde104a8d5c12579527119817ef7008282fbe14b/Healthcare_Provider_Data_Analysis">Hospital Data Analysis</a></h3>
+			  <p>This project is an interactive healthcare navigator dashboard designed to provide a comprehensive view of various healthcare metrics. The dashboard integrates multiple data sources to present insights on billing, costs, patient satisfaction, common diagnoses, and more.</p>
+			</div>
+		  </div>
+		</div>
+          
+
 
 		  <div class="col-md-4 d-flex ftco-animate">
 			<div class="blog-entry justify-content-end">
@@ -488,23 +560,12 @@
 			</a>
 			<div class="text mt-3 float-right d-block">
 
-			  <h3 class="heading"><a href="https://github.com/Amityadav10x/Excel_Projects/tree/main/Coffe_Sales_Report">Coffee sales dashboard using Excel</a></h3>
+			  <h3 class="heading"><a href="https://github.com/Amityadav10x/Excel_Projects/tree/main/Coffe_Sales_Report">Coffee sales Analysis using Excel</a></h3>
 			  <p>Utilized advanced Excel analytics to conduct a comprehensive analysis of coffee shop sales data.</p>
 			</div>
 		  </div>
 		</div>
 
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-            <a href="https://github.com/Amityadav10x/Power_BI_Projects/tree/cde104a8d5c12579527119817ef7008282fbe14b/Healthcare_Provider_Data_Analysis" class="block-20 zoom-effect" style="background-image: url('images/dashboard2.png');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="https://github.com/Amityadav10x/Power-BI-Projects/tree/bec492d5c2d1be1992473d415049f9af74e39ca9/Healthcare_Provider_Data_Analysis">HealthCare Data Analysis</a></h3>
-                <p>This project is an interactive healthcare navigator dashboard designed to provide a comprehensive view of various healthcare metrics. The dashboard integrates multiple data sources to present insights on billing, costs, patient satisfaction, common diagnoses, and more.</p>
-              </div>
-            </div>
-          </div>
           
 		  <div class="col-md-4 d-flex ftco-animate">
 			<div class="blog-entry justify-content-end">
@@ -513,18 +574,18 @@
 			<div class="text mt-3 float-right d-block">
 
 			  <h3 class="heading"><a href="https://github.com/Amityadav10x/Machine_learning_Projects/tree/main/Machine_learning_project/Crop%20Reccomendation%20System">Crop Prediction using Machine-Learning</a></h3>
-			  <p>Used multiple machine learning models to predict crops and made a model which will help formers to suggest their crops.</p>
+			  <p>Used multiple machine learning models to predict crops and made a model which will help formers in suggesting their crops.</p>
 			</div>
 		  </div>
 		</div>
 
 		<div class="col-md-4 d-flex ftco-animate">
 			<div class="blog-entry justify-content-end">
-			<a href="https://github.com/Amityadav10x/Power-BI-Projects/tree/bec492d5c2d1be1992473d415049f9af74e39ca9/Bank%20Report%20Analysis" class="block-20 zoom-effect" style="background-image: url('images/bank\ sql.png');">
+			<a href="https://github.com/Amityadav10x/SQL_PROJECTS/tree/768cb743f2211986495477e231ebeab2021fef8c/Bank_Report_Analysis" class="block-20 zoom-effect" style="background-image: url('images/bank\ sql.png');">
 			</a>
 			<div class="text mt-3 float-right d-block">
 
-			  <h3 class="heading"><a href="https://github.com/Amityadav10x/Power-BI-Projects/tree/bec492d5c2d1be1992473d415049f9af74e39ca9/Bank%20Report%20Analysis">Bank Loan Report Analysis Using SQL</a></h3>
+			  <h3 class="heading"><a href="https://github.com/Amityadav10x/SQL_PROJECTS/tree/768cb743f2211986495477e231ebeab2021fef8c/Bank_Report_Analysis">Bank Loan Report Analysis Using SQL</a></h3>
 			  <p>Performed sql quires using SSMS and analyze key banking metrics, including loan applications, funded amounts, and customer segmentation.</p>
 			</div>
 		  </div>
@@ -559,14 +620,14 @@
             <div class="block-18">
               <div class="text">
                 <strong class="number" data-number="10">0</strong>
-                <span>Mentored Friends</span>
+                <span>Mentored Aspiring Data Analyst </span>
               </div>
             </div>
           </div>
           <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
             <div class="block-18">
               <div class="text">
-                <strong class="number" data-number="500">0</strong>
+                <strong class="number" data-number="300">+</strong>
                 <span>Cups of coffee</span>
               </div>
             </div>
@@ -617,7 +678,7 @@
           			<span class="icon-phone2"></span>
           		</div>
           		<h3 class="mb-4">Contact Number</h3>
-	            <p><a href="tel://0101010101">6354399293</a></p>
+	            <p><a href="tel://6354399293">+91-6354399293</a></p>
 	          </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
@@ -626,7 +687,7 @@
           			<span class="icon-paper-plane"></span>
           		</div>
           		<h3 class="mb-4">Email Address</h3>
-	            <p><a href="mailto:yaduvanshiamit10x@gmail.com">yaduvanshiamit10x@gmail.com</a></p>
+	            <p><a href="mailto:amityadav10x@gmail.com">amityadav10x@gmail.com</a></p>
 	          </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
@@ -635,7 +696,7 @@
           			<span class="icon-globe"></span>
           		</div>
           		<h3 class="mb-4">Download Resume</h3>
-				  <p><a href="https://drive.google.com/file/d/1_dyIxVf9bAsXadnNkVHvEGioM4tJIjVf/view?usp=sharing">Click Me</a></p>
+				  <p><a href="https://drive.google.com/file/d/1Q95e0RggBuhPAGuJTv5ENLyrTq1F7o7s/view?usp=sharing">Click Me</a></p>
 	          </div>
           </div>
 
@@ -654,7 +715,7 @@
 					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/amit-yadav-417bb5288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><span class="icon-linkedin"></span></a></li>  
 					  <li class="ftco-animate"><a href="https://x.com/Amityadav874?t=juezju50e7V6tRuckHPgVw&s=09"><span class="icon-twitter"></span></a></li>
 					  <li class="ftco-animate"><a href="https://www.facebook.com/Amit.yadav.635439?mibextid=ZbWKwL"><span class="icon-facebook"></span></a></li>
-				      <li class="ftco-animate"><a href="https://www.instagram.com/yaduvanshi_amit_"><span class="icon-instagram"></span></a></li>
+				      <!-- <li class="ftco-animate"><a href="https://www.instagram.com/yaduvanshi_amit?igsh=ZGtneDRibnJsa3F0"><span class="icon-instagram"></span></a></li> -->
 					</ul>
 				<br>
 		   </div>
