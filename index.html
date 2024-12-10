@@ -184,6 +184,35 @@
     transition: transform 0.5s ease, background-color 0.3s ease;
 }
 
+/* Fix image scaling and alignment */
+.block-20 {
+    height: 200px; /* Uniform height for all images */
+    background-size: cover; /* Ensures images cover the entire block */
+    background-position: center; /* Centers images */
+    border-radius: 5px; /* Optional: rounded corners for aesthetics */
+}
+
+/* Zoom effect */
+.zoom-effect {
+    overflow: hidden;
+    transition: transform 0.3s ease-out; /* Smooth zoom effect */
+}
+
+.zoom-effect:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 768px) {
+    .block-20 {
+        height: 150px; /* Smaller image height on mobile */
+    }
+    .heading-section h2 {
+        font-size: 1.5rem; /* Adjust heading size for smaller screens */
+    }
+}
+
+
 </style>
 
 
@@ -202,8 +231,9 @@
 	        <ul class="navbar-nav nav ml-auto">
 	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
 	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Vision</span></a></li>
+	         
 	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+			  <!-- <li class="nav-item"><a href="#certifications-section" class="nav-link"><span>Certifications</span></a></li> -->
 	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
 	        </ul>
 	      </div>
@@ -218,7 +248,7 @@
 			  <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
 				<div class="one-third js-fullheight order-md-last img-container">
 				  <div class="image-wrapper">
-					<img src="images/Myself.jpg" alt="Amit" class="profile-image">
+					<img src="images/Amit's Photo-photoaidcom-cropped.jpg" alt="Amit" class="profile-image">
 					<div class="hover-circle"></div>
 				  </div>
 				  <div class="overlay"></div>
@@ -294,7 +324,7 @@
 								<div class="row">
 									<div class="col-sm-6 col-md-5">
 									  <div class="about-img">
-										<img src="images/Amit's Photo-photoaidcom-cropped.jpg" class="img-fluid rounded b-shadow-a" alt="">
+										<img src="images/me.jpg" class="img-fluid rounded b-shadow-a" alt="">
 									  </div>
 									</div>
 									<!-- Details next to profile image -->
@@ -390,15 +420,16 @@
 
 
 	
-    <section class="ftco-section ftco-no-pb" id="resume-section">
+	
+    <section class="ftco-section ftco-no-pb" id="#">
     	<div class="container">
-    		<div class="row justify-content-center pb-5">
+    		<!-- <div class="row justify-content-center pb-5">
           <div class="col-md-10 heading-section text-center ftco-animate">
           	<h1 class="big big-2">Vision</h1>
             <h2 class="mb-4">Vision</h2>
             <p>Strong aspiration to become a skilled data analyst .</p> 
           </div>
-        </div>
+        </div> -->
 
 		<div class="row">
 			<h1 class="big-4">Experience</h1>
@@ -421,7 +452,6 @@
 					<a href="https://github.com/Amityadav10x/KultureHire-Business-Analyst-Internship-Works" class="btn btn-primary mt-3">Click Here To See The Work</a>
 				</div>
 			</div>
-			
 			
 
 			<!-- <div class="col-md-6">
@@ -458,7 +488,7 @@
 		<br>
 		<br>
 
-		<div class="row">
+		<!-- <div class="row">
 			<h1 class="big-4">Education</h1>
 			<div class="underline"></div>
 		</div>
@@ -482,7 +512,7 @@
     					<p class="mt-4">Grade: First class distinction.</p>
     				</div>
 				</div>
-    		</div>
+    		</div> -->
 
     		<div class="row justify-content-center mt-5">
     			<div class="col-md-6 text-center ftco-animate">
@@ -659,58 +689,166 @@
 	  </div>
     </section>
 
-	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
-      <div class="container">
-		<div class="row d-md-flex align-items-center">
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="5">0</strong>
-                <span>Achievements</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="20">0</strong>
-                <span>Projects</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="10">0</strong>
-                <span>Mentored Aspiring Data Analyst </span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="300">+</strong>
-                <span>Cups of coffee</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
+	<!-- <section class="ftco-section" id="certifications-section"> -->
+		<!-- <div class="container">
+			<div class="row justify-content-center mb-5 pb-5">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Certifications</h1>
+					<h2 class="mb-4">Certifications</h2>
+					<p>Below are some recognitions and Certifications.</p>
+				</div>
+			</div>
+			<div class="row d-flex"> -->
+				<!-- Certification 1 -->
+				<!-- <div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://courses.ibmcep.cognitiveclass.ai/certificates/9ee5906c354543b7b230430f6608b1e4" 
+						   class="block-20 zoom-effect" 
+						   style="background-image: url('images/IBM\ DV.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading">
+								<a href="https://courses.ibmcep.cognitiveclass.ai/certificates/9ee5906c354543b7b230430f6608b1e4">Data Visualization</a>
+							</h3>
+						</div>
+					</div>
+				</div> -->
 	
-	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
-			<!-- <div class="container"> -->
-				<div class="row justify-content-center">
-					<div class="col-md-7 ftco-animate text-center">
-						<h2>More projects on<span> Github  </span> </h2>
-						<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
-						<br>
-						<p><a href="https://github.com/Amityadav10x" class="btn btn-primary py-3 px-5">GitHub</a></p>
+				<!-- Certification 2 -->
+				<!-- <div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://courses.ibmcep.cognitiveclass.ai/certificates/d3a4e8e17bb14ab086ff3b09f65daea6" 
+						   class="block-20 zoom-effect" 
+						   style="background-image: url('images/IBM\ PYTHON.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading">
+								<a href="https://courses.ibmcep.cognitiveclass.ai/certificates/d3a4e8e17bb14ab086ff3b09f65daea6">Python</a>
+							</h3>
 						</div>
 					</div>
 				</div>
-			<!-- </div> -->
+	 -->
+				<!-- Certification 3 -->
+				<!-- <div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://courses.ibmcep.cognitiveclass.ai/certificates/437b27fcf609480ca5bcefab33fd0879" 
+						   class="block-20 zoom-effect" 
+						   style="background-image: url('images/Data\ Sciecne.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading">
+								<a href="https://courses.ibmcep.cognitiveclass.ai/certificates/437b27fcf609480ca5bcefab33fd0879">Data Science 101</a>
+							</h3>
+						</div>
+					</div>
+				</div>
+	 -->
+				<!-- Certification 4 -->
+				<!-- <div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="#" class="block-20 zoom-effect" 
+						   style="background-image: url('images/power\ bi\ simulation.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading"><a href="#">Power BI</a></h3>
+						</div>
+					</div>
+				</div> -->
+	
+				<!-- Certification 5 -->
+				<!-- <div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://www.udemy.com/certificate/UC-e764ce2e-50ab-47ed-b81b-624f73d55aef/" 
+						   class="block-20 zoom-effect" 
+						   style="background-image: url('images/Excel.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading">
+								<a href="https://www.udemy.com/certificate/UC-e764ce2e-50ab-47ed-b81b-624f73d55aef/">Excel</a>
+							</h3>
+						</div>
+					</div>
+				</div> -->
+	
+				<!-- Certification 6 -->
+				<!-- <div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="#" 
+						   class="block-20 zoom-effect" 
+						   style="background-image: url('images/essensials.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading">
+								<a href="#">Data Analysis Essentials</a>
+							</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> -->
+	<!-- </section> -->
+	
+
+
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+		<div class="container">
+		  <div class="row d-md-flex align-items-center">
+			<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+			  <div class="block-18">
+				<div class="text">
+				  <strong class="number" id="achievements-counter" data-number="5">0</strong>
+				  <span>Achievements</span>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+			  <div class="block-18">
+				<div class="text">
+				  <strong class="number" id="projects-counter" data-number="20">+</strong>
+				  <span>Projects</span>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+			  <div class="block-18">
+				<div class="text">
+				  <strong class="number" id="mentored-counter" data-number="15">+</strong>
+				  <span>Mentored Aspiring Analyst</span>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+			  <div class="block-18">
+				<div class="text">
+				  <strong class="number" id="coffee-counter" data-number="300">+</strong>
+				  <span>Cups of coffee</span>
+				</div>
+			  </div>
+			</div>
+		  </div>
 		</div>
-	</section>
+		
+		<div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+		  <div class="row justify-content-center">
+			<div class="col-md-7 ftco-animate text-center">
+			  <h2>More projects on<span> Github </span> </h2>
+			  <div class="heading"> 
+				<h4> I love to solve business problems &amp; uncover hidden data stories </h4>
+				<br>
+				<p><a href="https://github.com/Amityadav10x" class="btn btn-primary py-3 px-5">GitHub</a></p>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </section>
+	  
+	  
+	  
+	  
+	  
 
 
 
@@ -829,5 +967,3 @@
     
   </body>
 </html>
-
-
