@@ -213,6 +213,34 @@
 }
 
 
+.text p {
+    max-height: 100px; /* Adjust to control visible text height */
+    overflow-y: auto;
+    margin-bottom: 1em; /* Spacing between text and next section */
+    scrollbar-width: thin; /* Makes the scrollbar narrower */
+    scrollbar-color: black rgba(237, 232, 232, 0.227); /* Scrollbar thumb is black, track is white */
+  }
+
+  /* For WebKit Browsers */
+  .text p::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+  }
+
+  .text p::-webkit-scrollbar-track {
+    background: white; /* Scrollbar track color */
+  }
+
+  .text p::-webkit-scrollbar-thumb {
+    background-color: black; /* Scrollbar thumb color */
+    border-radius: 10px; /* Rounded edges for the thumb */
+  }
+
+  .text p::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Slightly lighter black on hover */
+  }
+
+  
+
 </style>
 
 
@@ -390,12 +418,12 @@
 								<p>I am an aspiring data analyst with expertise in advanced Excel, SQL, Power BI, Tableau, and machine learning. Recognized as a Data Analyst Top Voice on LinkedIn, I am passionate about leveraging data to uncover insights and drive strategic decision-making. My goal is to apply these skills to solve complex problems and make meaningful contributions to data-driven projects.</p>
 								<ul class="about-info mt-4 px-md-0 px-2">
 									<li class="d-flex"><span>Profile:</span> <span>Data Analytics &amp; Business analytics</span></li>
-									<li class="d-flex"><span>Domain:</span> <span>Retail, E-commerce, Healthcare &amp; Banking , Engineering</span></li>
-									<li class="d-flex"><span>Education:</span> <span>Bachelor of Engineering</span></li>
+									<li class="d-flex"><span>Domain:</span> <span>Retail, E-commerce, Healthcare, Banking &amp;,Research</span></li>
+									<li class="d-flex"><span>Education:</span> <span>Bachelor of Engineering (IBM)</span></li>
 									<li class="d-flex"><span>Language:</span> <span>English, Hindi, Gujarati</span></li>
 									<li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI, Advance Excel, Python, SQL,Tableau</span></li>
-									<li class="d-flex"><span>Other Skills:</span> <span>Cloud,Machine Learning, Git,Google Analytics &amp; SEO</span></li>
-									<li class="d-flex"><span>Interest:</span> <span>Traveling, Cricket, Book Reading, Exploring Global Affairs</span></li>
+									<li class="d-flex"><span>Other Skills:</span> <span>Cloud,Machine Learning,Google Analytics &amp; SEO</span></li>
+									<li class="d-flex"><span>Interest:</span> <span>Exploring Global Affairs, Geopolitics, Poetry, Cricket</span></li>
 									
 								</ul>
 							</div>
@@ -536,13 +564,34 @@
         </div>
         <div class="row d-flex">
 
+
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/Amityadav10x/Power-BI-Projects/tree/d76a41b4cb2b8a43fc25ba0e629ae53feeadfb8f/Transport%20And%20Mobility%20Analysis" class="block-20 zoom-effect" style="background-image: url('images/1.png');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://app.powerbi.com/groups/me/reports/5b6ffb4d-7a9c-42a2-ba7b-f48b698333bb/62898ee0d6c892c925b6?experience=power-bi">Transport Data Analysis</a></h3>
+				  <p>Developed an interactive Power BI dashboard to analyze key metrics for a cab service, including repeat passenger rates, revenue trends, trip demand patterns, and target achievements. Provided actionable insights to optimize operations, enhance customer satisfaction, and align business strategies with emerging trends.</p>
+				  <h5 class="mt-3">Tools Used:</h5>
+            <ul>
+                <li>Power BI , SQL</li>
+
+            </ul>
+				</div>
+			  </div>
+			</div>
+
+
+
+
 			<div class="col-md-4 d-flex ftco-animate">
 				<div class="blog-entry justify-content-end">
 				<a href="https://github.com/Amityadav10x/Power-BI-Projects/tree/4485d00f77358339af3c8a6a41f8f5c75a73e6b7/AtiliQ%20Motors%20Sales%20Analysis" class="block-20 zoom-effect" style="background-image: url('images/State\ Wise.png');">
 				</a>
 				<div class="text mt-3 float-right d-block">
   
-				  <h3 class="heading"><a href="https://github.com/Amityadav10x/Power-BI-Projects/tree/4485d00f77358339af3c8a6a41f8f5c75a73e6b7/AtiliQ%20Motors%20Sales%20Analysis">AtiliQ Motors Business Analysis</a></h3>
+				  <h4 class="heading"><a href="https://github.com/Amityadav10x/Power-BI-Projects/tree/4485d00f77358339af3c8a6a41f8f5c75a73e6b7/AtiliQ%20Motors%20Sales%20Analysis">AtiliQ Motors Business Analysis</a></h4>
 				  <p>Conducted an in-depth analysis of India’s growing Electric Vehicle (EV) market using Power BI, focusing on state-wise sales, charging infrastructure growth, and market penetration rates.</p>
 				  <h5 class="mt-3">Tools Used:</h5>
             <ul>
@@ -574,6 +623,22 @@
             </div>
           </div>
 
+		  <div class="col-md-4 d-flex ftco-animate">
+			<div class="blog-entry justify-content-end">
+			<a href="https://github.com/Amityadav10x/Power_BI_Projects/tree/cde104a8d5c12579527119817ef7008282fbe14b/Healthcare_Provider_Data_Analysis" class="block-20 zoom-effect" style="background-image: url('images/dashboard2.png');">
+			</a>
+			<div class="text mt-3 float-right d-block">
+
+			  <h3 class="heading"><a href="https://github.com/Amityadav10x/Power_BI_Projects/tree/cde104a8d5c12579527119817ef7008282fbe14b/Healthcare_Provider_Data_Analysis">Hospital Data Analysis</a></h3>
+			  <p>This project is an interactive healthcare navigator dashboard designed to provide a comprehensive view of various healthcare metrics.</p>
+			  <h5 class="mt-3">Tools Used:</h5>
+			  <ul>
+				  <li>Power BI , SQL, Excel</li>
+  
+			  </ul>
+			</div>
+		  </div>
+		</div>
                          
          <div class="col-md-4 d-flex ftco-animate">
     <div class="blog-entry justify-content-end">
@@ -612,59 +677,52 @@
 		  </div>
 		</div>
 
+		
+          
+
+
 		<div class="col-md-4 d-flex ftco-animate">
 			<div class="blog-entry justify-content-end">
-			<a href="https://github.com/Amityadav10x/Power_BI_Projects/tree/cde104a8d5c12579527119817ef7008282fbe14b/Healthcare_Provider_Data_Analysis" class="block-20 zoom-effect" style="background-image: url('images/dashboard2.png');">
-			</a>
-			<div class="text mt-3 float-right d-block">
-
-			  <h3 class="heading"><a href="https://github.com/Amityadav10x/Power_BI_Projects/tree/cde104a8d5c12579527119817ef7008282fbe14b/Healthcare_Provider_Data_Analysis">Hospital Data Analysis</a></h3>
-			  <p>This project is an interactive healthcare navigator dashboard designed to provide a comprehensive view of various healthcare metrics.</p>
-			  <h5 class="mt-3">Tools Used:</h5>
-			  <ul>
-				  <li>Power BI , SQL, Excel</li>
-  
-			  </ul>
-			</div>
-		  </div>
-		</div>
-          
-
-
-		  <div class="col-md-4 d-flex ftco-animate">
-			<div class="blog-entry justify-content-end">
-			<a href="https://github.com/Amityadav10x/Excel_Projects/tree/main/Coffe_Sales_Report" class="block-20 zoom-effect" style="background-image: url('images/proj_1.webp');">
-			</a>
-			<div class="text mt-3 float-right d-block">
-
-			  <h3 class="heading"><a href="https://github.com/Amityadav10x/Excel_Projects/tree/main/Coffe_Sales_Report">Coffee sales Analysis using Excel</a></h3>
-			  <p>Utilized advanced Excel analytics to conduct a comprehensive analysis of coffee shop sales data.</p>
-			  <h5 class="mt-3">Tools Used:</h5>
-			  <ul>
+			  <a href="https://github.com/Amityadav10x/Excel_Projects/tree/main/Coffe_Sales_Report" class="block-20 zoom-effect" style="background-image: url('images/proj_1.webp');">
+			  </a>
+			  <div class="text mt-3 float-right d-block">
+				<h3 class="heading">
+				  <a href="https://github.com/Amityadav10x/Excel_Projects/tree/main/Coffe_Sales_Report">Coffee Sales Data Analysis using Excel</a>
+				</h3>
+				<p>
+				  Utilized advanced Excel analytics to conduct a comprehensive analysis of coffee shop sales data. 
+				  This project highlights key sales trends, top-performing products, and customer purchase behavior. 
+				  Analyzed seasonal sales patterns to assist in inventory management and marketing strategies.
+				</p>
+				<h5 class="mt-3">Tools Used:</h5>
+				<ul>
 				  <li>Excel</li>
-  
-			  </ul>
+				</ul>
+			  </div>
 			</div>
 		  </div>
-		</div>
-
-          
+		  
 		  <div class="col-md-4 d-flex ftco-animate">
 			<div class="blog-entry justify-content-end">
-			<a href="https://github.com/Amityadav10x/Machine_learning_Projects/blob/main/Machine_learning_project/Crop%20Reccomendation%20System/Crop%20Reccomendation%20System.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
-			</a>
-			<div class="text mt-3 float-right d-block">
-
-			  <h3 class="heading"><a href="https://github.com/Amityadav10x/Machine_learning_Projects/tree/main/Machine_learning_project/Crop%20Reccomendation%20System">Crop Prediction using Machine-Learning</a></h3>
-			  <p>Used multiple machine learning models to predict crops and made a model which will help formers in suggesting their crops.</p>
-			  <h5 class="mt-3">Tools Used:</h5>
-			  <ul>
+			  <a href="https://github.com/Amityadav10x/Machine_learning_Projects/blob/main/Machine_learning_project/Crop%20Reccomendation%20System/Crop%20Reccomendation%20System.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
+			  </a>
+			  <div class="text mt-3 float-right d-block">
+				<h3 class="heading">
+				  <a href="https://github.com/Amityadav10x/Machine_learning_Projects/tree/main/Machine_learning_project/Crop%20Reccomendation%20System">Crop Prediction using Machine Learning</a>
+				</h3>
+				<p>
+				  Designed and implemented a crop recommendation system using various machine learning models. 
+				  The system analyzes soil composition, weather conditions, and crop yield data to provide actionable suggestions to farmers. 
+				  This project focuses on improving agricultural productivity and sustainable farming practices.
+				</p>
+				<h5 class="mt-3">Tools Used:</h5>
+				<ul>
 				  <li>Python, Machine Learning</li>
-  
-			  </ul>
+				</ul>
+			  </div>
 			</div>
 		  </div>
-		</div>
+		  
 
 		<div class="col-md-4 d-flex ftco-animate">
 			<div class="blog-entry justify-content-end">
