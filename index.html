@@ -296,18 +296,17 @@
     }
   })(document, window.mixpanel || []);
 
-  // Initialize Mixpanel with your token
+  // Initialize Mixpanel with your token and desired configuration
   mixpanel.init("dda3988b175b02d66cb609a55cb7106f", {
     debug: true,
-    track_pageview: true
+    track_pageview: true,
+    ignore_dnt: true
   });
 
   // Track when portfolio loads
   mixpanel.track("Portfolio Loaded");
-	 mixpanel.init("dda3988b175b02d66cb609a55cb7106f", { 
-  ignore_dnt: true, 
-});
 </script>
+
 
 
 
