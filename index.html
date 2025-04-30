@@ -307,6 +307,38 @@
   mixpanel.track("Portfolio Loaded");
 </script>
 
+	  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Track social link clicks
+    const linkedinBtns = document.querySelectorAll('a[href*="linkedin.com"]');
+    linkedinBtns.forEach(btn => btn.addEventListener("click", () => mixpanel.track("LinkedIn Clicked")));
+
+    const githubBtns = document.querySelectorAll('a[href*="github.com"]');
+    githubBtns.forEach(btn => btn.addEventListener("click", () => mixpanel.track("GitHub Clicked")));
+
+    const resumeBtns = document.querySelectorAll('a[href*="drive.google.com"]');
+    resumeBtns.forEach(btn => btn.addEventListener("click", () => mixpanel.track("Resume Downloaded")));
+
+    // Track section views using IntersectionObserver
+    function trackSectionView(sectionId, eventName) {
+      const section = document.getElementById(sectionId);
+      if (!section) return;
+
+      const observer = new IntersectionObserver(entries => {
+        if (entries[0].isIntersecting === true) {
+          mixpanel.track(eventName);
+          observer.unobserve(section); // track only once
+        }
+      }, { threshold: [0.5] });
+
+      observer.observe(section);
+    }
+
+    trackSectionView("project-section", "Viewed Projects Section");
+    trackSectionView("contact-section", "Viewed Contact Section");
+  });
+</script>
+
 
 
 
