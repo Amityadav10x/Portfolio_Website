@@ -298,12 +298,12 @@
 
   // Initialize Mixpanel with your token and desired configuration
   mixpanel.init("dda3988b175b02d66cb609a55cb7106f", {
-    debug: true,
-    track_pageview: true,
-    ignore_dnt: true
+    debug: true,  // Logs additional debug information to the console
+    track_pageview: true,  // Automatically tracks page views
+    ignore_dnt: true  // Ensures tracking is not blocked by Do Not Track settings
   });
 
-  // Track when portfolio loads
+  // Track when the portfolio loads
   mixpanel.track("Portfolio Loaded");
 </script>
 
