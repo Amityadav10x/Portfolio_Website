@@ -243,105 +243,6 @@
 
 </style>
 
-	  <!-- Mixpanel Integration -->
-<script type="text/javascript">
-  (function (f, b) {
-    if (!b.__SV) {
-      var e, g, i, h;
-      window.mixpanel = b;
-      b._i = [];
-      b.init = function (e, f, c) {
-        function g(a, d) {
-          var b = d.split(".");
-          2 == b.length && ((a = a[b[0]]), (d = b[1]));
-          a[d] = function () {
-            a.push([d].concat(Array.prototype.slice.call(arguments, 0)));
-          };
-        }
-        var a = b;
-        "undefined" !== typeof c ? (a = b[c] = []) : (c = "mixpanel");
-        a.people = a.people || [];
-        a.toString = function (a) {
-          var d = "mixpanel";
-          "mixpanel" !== c && (d += "." + c);
-          a || (d += " (stub)");
-          return d;
-        };
-        a.people.toString = function () {
-          return a.toString(1) + ".people (stub)";
-        };
-        i = "disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
-        for (h = 0; h < i.length; h++) g(a, i[h]);
-        var j = "set set_once union unset remove delete".split(" ");
-        a.get_group = function () {
-          function b(c) {
-            d[c] = function () {
-              call2_args = arguments;
-              call2 = [c].concat(Array.prototype.slice.call(call2_args, 0));
-              a.push([e, call2]);
-            };
-          }
-          for (var d = {}, e = ["get_group"].concat(Array.prototype.slice.call(arguments, 0)), c = 0; c < j.length; c++) b(j[c]);
-          return d;
-        };
-        b._i.push([e, f, c]);
-      };
-      b.__SV = 1.2;
-      e = f.createElement("script");
-      e.type = "text/javascript";
-      e.async = !0;
-      e.src = "https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";
-      g = f.getElementsByTagName("script")[0];
-      g.parentNode.insertBefore(e, g);
-    }
-  })(document, window.mixpanel || []);
-
-  // Initialize Mixpanel with your token and desired configuration
-  mixpanel.init("dda3988b175b02d66cb609a55cb7106f", {
-    debug: true,  // Logs additional debug information to the console
-    track_pageview: true,  // Automatically tracks page views
-    ignore_dnt: true  // Ensures tracking is not blocked by Do Not Track settings
-  });
-
-  // Track when the portfolio loads
-  mixpanel.track("Portfolio Loaded");
-</script>
-
-	  <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    // Track social link clicks
-    const linkedinBtns = document.querySelectorAll('a[href*="linkedin.com"]');
-    linkedinBtns.forEach(btn => btn.addEventListener("click", () => mixpanel.track("LinkedIn Clicked")));
-
-    const githubBtns = document.querySelectorAll('a[href*="github.com"]');
-    githubBtns.forEach(btn => btn.addEventListener("click", () => mixpanel.track("GitHub Clicked")));
-
-    const resumeBtns = document.querySelectorAll('a[href*="drive.google.com"]');
-    resumeBtns.forEach(btn => btn.addEventListener("click", () => mixpanel.track("Resume Downloaded")));
-
-    // Track section views using IntersectionObserver
-    function trackSectionView(sectionId, eventName) {
-      const section = document.getElementById(sectionId);
-      if (!section) return;
-
-      const observer = new IntersectionObserver(entries => {
-        if (entries[0].isIntersecting === true) {
-          mixpanel.track(eventName);
-          observer.unobserve(section); // track only once
-        }
-      }, { threshold: [0.5] });
-
-      observer.observe(section);
-    }
-
-    trackSectionView("project-section", "Viewed Projects Section");
-    trackSectionView("contact-section", "Viewed Contact Section");
-  });
-</script>
-
-
-
-
 
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -349,7 +250,7 @@
 	  
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Analyst Amit</a>
+	      <a class="navbar-brand" href="index.html"> ProcessPro </a>
 	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
@@ -422,7 +323,7 @@
 	  
 					<br>
 					<br>
-					<h2>Data Analyst Expert</h2>
+					<h2>Automation Engineer</h2>
 					  <a href="https://www.linkedin.com/in/amit-yadav-10x"
 						class="btn btn-primary py-3 px-4">Linkedin</a>
 					  <a href="https://github.com/Amityadav10x" class="btn btn-white btn-outline-white py-3 px-3">My works</a>
@@ -457,46 +358,46 @@
 									<div class="col-sm-6 col-md-7">
 									  <div class="about-info">
 										<p><span class="title-s">Name: </span> <span>Amit Yadav</span></p>
-										<p><span class="title-s">Job Role: </span> <span> Data Analysis & Business Analysis</span></p>
+										<p><span class="title-s">Job Role: </span> <span> Data Automation Engineer</span></p>
 										<p><span class="title-s">Experience: </span> <span>6 Months</span></p>
-										<p><span class="title-s">Address: </span> <span>Basti, India</span></p>
+										<p><span class="title-s">Address: </span> <span>Surat, Gujrat</span></p>
 									  </div>
 									</div>
 								  </div>
 
 								<div class="skill-mf">
 									<p class="title-s">Skills</p>
-									<span>SQL</span> <span class="pull-right">70%</span>
+									<span>Machine Learning</span> <span class="pull-right">70%</span>
 									<div class="progress">
 										<div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="95" aria-valuemin="0"
 											aria-valuemax="100"></div>
 									</div>
 
-									<span>POWER BI</span> <span class="pull-right">80%</span>
+									<span>Microsoft Azure</span> <span class="pull-right">80%</span>
 									<div class="progress">
 										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="85" aria-valuemin="0"
 											aria-valuemax="100"></div>
 									</div>
 									
-									<span>PYTHON</span> <span class="pull-right">60%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Tableau</span> <span class="pull-right">70%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="90" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Advance Excel</span> <span class="pull-right">70%</span>
+									<span>Microsoft Power BI , Looker Pro</span> <span class="pull-right">70</span>
 									<div class="progress">
 										<div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="85" aria-valuemin="0"
 											aria-valuemax="100"></div>
 									</div>
 									
-									<span>Machine Learning</span> <span class="pull-right">60%</span>
+									<span>n8n</span> <span class="pull-right">70%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Big query</span> <span class="pull-right">60%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Java Script , JSON</span> <span class="pull-right">60%</span>
 									<div class="progress">
 										<div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="80" aria-valuemin="0"
 											aria-valuemax="100"></div>
@@ -507,25 +408,17 @@
 					</div>
 					
 					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
-						<div class="row justify-content-start pb-3">
-							<div class="col-md-12 heading-section ftco-animate">
-								
-								<h1 class="big">About</h1>
-								<h2 class="mb-4">About Me</h2>
-								
-								<p> A Data analyst with expertise in Microsoft Power BI , SQL, Advance Excel, Tableau, and machine learning.I am passionate about leveraging data to uncover insights and drive strategic decision-making. Explore My portfolio to see my work and how I can bring a fresh perspective to your team .</p>
-								<ul class="about-info mt-4 px-md-0 px-2">
-									<li class="d-flex"><span>Profile:</span> <span>Data Science &amp; Analytics</span></li>
-									<!-- <li class="d-flex"><span>Domain:</span> <span>Retail, E-commerce, Healthcare, Banking &amp;,Research</span></li> -->
-									<li class="d-flex"><span>Education:</span> <span>Bachelors of computer Engineering (Association With IBM) </span></li>
-									<li class="d-flex"><span>Programming Language:</span> <span>Python,SQL</span></li>
-									<li class="d-flex"><span>Data Visualization Tools</span> <span>Microsoft Power BI, Tableaue, Advance Excel, IBM Cognos </span></li>
-									<li class="d-flex"><span>Machine Learning:</span> <span>Pandas, NumPy, Matplotlib, Scipy, Scikit-learn</span></li>
-									<li class="d-flex"><span>Interest:</span> <span>Exploring Global Affairs, Geopolitics, Poetry, Cricket</span></li>
-									
-								</ul>
-							</div>
-						</div>
+						<div class="about-section">
+  <ul class="about-info mt-4 px-md-0 px-2">
+    <li class="d-flex"><span>Profile:</span><span>Data Automation Engineer</span></li>
+    <li class="d-flex"><span>Education:</span><span>Bachelor’s in Computer Engineering (in collaboration with IBM)</span></li>
+    <li class="d-flex"><span>Languages & Scripting:</span><span>Python, SQL, JavaScript, TypeScript, Bash, JSON</span></li>
+    <li class="d-flex"><span>Automation & ETL Tools:</span><span>Airflow, Prefect, n8n, dbt, Azure Data Factory, Airtable, Power BI</span></li>
+    <li class="d-flex"><span>Processing & Storage:</span><span>Spark, Snowflake, Redshift, BigQuery</span></li>
+    <li class="d-flex"><span>DevOps & Monitoring:</span><span>Docker, CI/CD, Grafana, ELK Stack</span></li>
+    <li class="d-flex"><span>Other Tools:</span><span>Power BI, JSON, TypeScript, JavaScript,Git, GitHub</span></li>
+	    <li class="d-flex"><span>Marketing Fundamentals:</span><span>Market Research, Content Strategy, Analytics, RevOps, Content Engine Design</span></li>
+</div>
 
 
 						<div class="counter-wrap ftco-animate d-flex mt-md-3">
@@ -565,19 +458,23 @@
 		
 		<div class="row">
 			<div class="col-md-6">
-				<div class="resume-wrap ftco-animate">
-					<span class="date">August 24 - September 24</span>
-					<h2>Business Analyst</h2>
-					<span class="position">KultureHire Tech Private Limited</span>
-					<p class="mt-4">At KultureHire, I gained valuable insights into business processes and strategies, which helped me sharpen my skills in data analysis.</p>
-					<ul>
-						<li>Worked on an unguided project titled "Career Aspirations of Gen Z," using Excel, SQL, and Power BI.</li>
-						<li>Developed dashboards and reports to present findings.</li>
-					</ul>
-					<!-- Add the clickable link below -->
-					<a href="https://github.com/Amityadav10x/KultureHire-Business-Analyst-Internship-Works" class="btn btn-primary mt-3">Click Here To See The Work</a>
-				</div>
-			</div>
+  <div class="resume-wrap ftco-animate">
+    <span class="date">April 2025 - Present</span>
+    <h2>Data Automation Engineer</h2>
+    <span class="position">Electric Octopus</span>
+    <p class="mt-4">
+      At Electric Octopus, I am responsible for building scalable, automated data workflows that streamline business operations and enhance analytics capabilities.
+    </p>
+    <ul>
+      <li>Designed and deployed automation pipelines using n8n, Airtable, and REST APIs.</li>
+      <li>Integrated data from tools like Clay, Mixpanel, and BigQuery into centralized dashboards.</li>
+      <li>Built monitoring and alerting workflows using JSON logic and scripting in Python & JavaScript.</li>
+    </ul>
+    <!-- Add the clickable link below -->
+    <!-- <a href="https://github.com/Amityadav10x/Electric-Octopus-Automation-Engineer-Projects" class="btn btn-primary mt-3">Click Here To See The Work</a> -->
+  </div>
+</div>
+
 			
 
 			<!-- <div class="col-md-6">
@@ -663,9 +560,7 @@
         <div class="row d-flex">
 
 
-			
-		
-		<div class="col-md-4 d-flex ftco-animate">
+			<div class="col-md-4 d-flex ftco-animate">
 				<div class="blog-entry justify-content-end">
 				<a href="https://github.com/Amityadav10x/OYO-Rooms-Data-Analysis" class="block-20 zoom-effect" style="background-image: url('images/oyo.png');">
 				</a>
@@ -684,8 +579,22 @@
 
 
 
-		
-		<div class="col-md-4 d-flex ftco-animate">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<div class="col-md-4 d-flex ftco-animate">
 				<div class="blog-entry justify-content-end">
 				<a href="https://github.com/Amityadav10x/Power-BI-Projects/tree/d76a41b4cb2b8a43fc25ba0e629ae53feeadfb8f/Transport%20And%20Mobility%20Analysis" class="block-20 zoom-effect" style="background-image: url('images/1.png');">
 				</a>
@@ -868,7 +777,7 @@
     </section>
 
 
-	<!-- <section class="ftco-section" id="certifications-section"> -->
+	  <!-- <section class="ftco-section" id="certifications-section"> -->
 		<!-- <div class="container">
 			<div class="row justify-content-center mb-5 pb-5">
 				<div class="col-md-7 heading-section text-center ftco-animate">
@@ -1145,3 +1054,6 @@
     
   </body>
 </html>
+
+
+
