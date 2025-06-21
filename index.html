@@ -34,6 +34,11 @@
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
+.about-mf .box-shadow-full .about-info {
+  padding: 0 2rem;
+}
+
+ 
 
 .about-mf .about-img {
   margin-bottom: 2rem;
@@ -150,6 +155,11 @@
   margin-top: 100px; 
 }
 
+.image-wrapper {
+  position: relative; 
+  margin-top: 120px; 
+  margin-left: 100px; /* ← This shifts the image slightly to the right */
+}
 .profile-image {
   max-width: 80%;
   display: block; 
@@ -261,7 +271,7 @@
 	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
 	         
 	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
-			  <!-- <li class="nav-item"><a href="#certifications-section" class="nav-link"><span>Certifications</span></a></li> -->
+			  <!-- <li class="nav-item"><a href="#education-section" class="nav-link"><span>Education</span></a></li> -->
 	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
 	        </ul>
 	      </div>
@@ -296,8 +306,8 @@
 					  // Create an array of typing text
 					  const typingTexts = [
 						'Analytical  ',
-						'Innovative    ',
-						'Meticulous   ',
+						'Resilient  ',
+						'Relentless   ',
 					  ];
 	  
 					  // Create a function to display the typing animation for a given text
@@ -323,10 +333,14 @@
 	  
 					<br>
 					<br>
+					
+		
 					<h2>Automation Engineer</h2>
+					<!-- <p class="mb-4">I am an AI Automation Engineer with a passion for leveraging data to drive business insights and operational efficiency. My expertise lies in building scalable data pipelines, automating workflows, and creating interactive dashboards to visualize complex datasets.</p> -->
 					  <a href="https://www.linkedin.com/in/amit-yadav-10x"
 						class="btn btn-primary py-3 px-4">Linkedin</a>
-					  <a href="https://github.com/Amityadav10x" class="btn btn-white btn-outline-white py-3 px-3">My works</a>
+					  <a href="https://github.com/Amityadav10x" class="btn btn-white btn-outline-white py-3 px-3" style="margin-left: 60px;">My works</a>
+
 					</p>
 				  </div>
 				</div>
@@ -373,13 +387,13 @@
 											aria-valuemax="100"></div>
 									</div>
 
-									<span>Microsoft Azure</span> <span class="pull-right">60%</span>
+									<span>Microsoft Azure</span> <span class="pull-right">80%</span>
 									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="85" aria-valuemin="0"
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="85" aria-valuemin="0"
 											aria-valuemax="100"></div>
 									</div>
 									
-									<span>Microsoft Power BI , Looker Pro , Tableau</span> <span class="pull-right">70</span>
+									<span>Power BI , Looker Pro, Tableau</span> <span class="pull-right">70</span>
 									<div class="progress">
 										<div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="85" aria-valuemin="0"
 											aria-valuemax="100"></div>
@@ -397,9 +411,9 @@
 											aria-valuemax="100"></div>
 									</div>
 									
-									<span>Java Script , JSON</span> <span class="pull-right">60%</span>
+									<span>Java Script , JSON</span> <span class="pull-right">70%</span>
 									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="80" aria-valuemin="0"
+										<div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="80" aria-valuemin="0"
 											aria-valuemax="100"></div>
 									</div>
 								</div>
@@ -410,14 +424,14 @@
 					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
 						<div class="about-section">
   <ul class="about-info mt-4 px-md-0 px-2">
-    <li class="d-flex"><span>Profile:</span><span>Data Automation Engineer</span></li>
-    <li class="d-flex"><span>Education:</span><span>Bachelor’s in Computer Engineering (in collaboration with IBM)</span></li>
+    <li class="d-flex"><span>Profile:</span><span>AI Automation Engineer</span></li>
+    <li class="d-flex"><span>Education:</span><span>Bachelor’s in Computer Science (in collaboration with IBM)</span></li>
     <li class="d-flex"><span>Languages & Scripting:</span><span>Python, SQL, JavaScript, TypeScript, Bash, JSON</span></li>
-    <li class="d-flex"><span>Automation & ETL Tools:</span><span>Airflow, Prefect, n8n, dbt, Azure Data Factory, Airtable</span></li>
-    <li class="d-flex"><span>Processing & Storage:</span><span>Spark, Snowflake, Redshift, BigQuery</span></li>
+    <li class="d-flex"><span>Automation & ETL Tools:</span><span>Airflow, Prefect, n8n, dbt, Azure Data Factory, Airtable, Power BI</span></li>
+    <li class="d-flex"><span>Processing & Storage:</span><span>SQL, Snowflake , BigQuery</span></li>
     <li class="d-flex"><span>DevOps & Monitoring:</span><span>Docker, CI/CD, Grafana, ELK Stack</span></li>
-    <li class="d-flex"><span>Analytics Tools:</span><span>Power BI, IBM Cognos, Tableau,</span></li>
-    <li class="d-flex"><span>Marketing Fundamentals:</span><span>Market Research, Content Strategy, Analytics, RevOps, Content Engine Design</span></li>
+    <li class="d-flex"><span>Other Tools:</span><span>Power BI, JSON, TypeScript, JavaScript,Git, GitHub</span></li>
+	    <li class="d-flex"><span>Marketing Fundamentals:</span><span>Market Research, Content Strategy & Planning, Analytics, RevOps, Content Engine Design</span></li>
 </div>
 
 
@@ -442,13 +456,13 @@
 	
     <section class="ftco-section ftco-no-pb" id="#">
     	<div class="container">
-    		<!-- <div class="row justify-content-center pb-5">
+    		<div class="row justify-content-center pb-5">
           <div class="col-md-10 heading-section text-center ftco-animate">
           	<h1 class="big big-2">Vision</h1>
             <h2 class="mb-4">Vision</h2>
-            <p>Strong aspiration to become a skilled data analyst .</p> 
+            <p>To automate with purpose — transforming repetitive tasks into efficient, intelligent processes that scale with business needs.</p> 
           </div>
-        </div> -->
+        </div>
 
 		<div class="row">
 			<h1 class="big-4">Experience</h1>
@@ -460,9 +474,10 @@
 			<div class="col-md-6">
   <div class="resume-wrap ftco-animate">
     <span class="date">April 2025 - Present</span>
-    <h2>Data Automation Engineer</h2>
+    <h2>AI Automation Engineer</h2>
     <span class="position">Electric Octopus</span>
-
+	<br>
+	<span class="position">London, United Kingdom (Remote)</span>
     <p class="mt-4">
       At Electric Octopus, I am responsible for building scalable, automated data workflows that streamline business operations and enhance analytics capabilities.
     </p>
@@ -512,7 +527,7 @@
 		<br>
 		<br>
 
-		<!-- <div class="row">
+		<div class="row">
 			<h1 class="big-4">Education</h1>
 			<div class="underline"></div>
 		</div>
@@ -521,10 +536,10 @@
 			<div class="row">
     			<div class="col-md-6">
     				<div class="resume-wrap ftco-animate">
-    					<span class="date">2022-Present</span>
-    					<h2>Bachelor of Engineering</h2>
+    					<span class="date">2022-2025</span>
+    					<h2>Bachelor of Computer Science</h2>
     					<span class="position">United University</span>
-    					<p class="mt-4">Grade: First class distinction.</p>
+    					<p class="mt-3">Grade: First class distinction.</p>
     				</div>
     			</div>
 
@@ -533,10 +548,12 @@
     					<span class="date">2019-2021</span>
     					<h2>Higher Secondary School</h2>
     					<span class="position">Kishan Inter college</span>
-    					<p class="mt-4">Grade: First class distinction.</p>
+    					<p class="mt-3">Grade: First class distinction.</p>
     				</div>
 				</div>
-    		</div> -->
+    		</div>
+			
+			
 
     		<div class="row justify-content-center mt-5">
     			<div class="col-md-6 text-center ftco-animate">
@@ -778,7 +795,7 @@
     </section>
 
 
-	  <!-- <section class="ftco-section" id="certifications-section"> -->
+	<!-- <section class="ftco-section" id="certifications-section"> -->
 		<!-- <div class="container">
 			<div class="row justify-content-center mb-5 pb-5">
 				<div class="col-md-7 heading-section text-center ftco-animate">
@@ -884,53 +901,40 @@
 	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
 		<div class="container">
 		  <div class="row d-md-flex align-items-center">
-			<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-			  <div class="block-18">
-				<div class="text">
-				  <strong class="number" id="achievements-counter" data-number="5">0</strong>
-				  <span>Achievements</span>
-				</div>
-			  </div>
-			</div>
-			<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-			  <div class="block-18">
-				<div class="text">
-				  <strong class="number" id="projects-counter" data-number="20">+</strong>
-				  <span>Projects</span>
-				</div>
-			  </div>
-			</div>
-			<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-			  <div class="block-18">
-				<div class="text">
-				  <strong class="number" id="mentored-counter" data-number="15">+</strong>
-				  <span>Mentored Aspiring Analyst</span>
-				</div>
-			  </div>
-			</div>
-			<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-			  <div class="block-18">
-				<div class="text">
-				  <strong class="number" id="coffee-counter" data-number="300">+</strong>
-				  <span>Cups of coffee</span>
-				</div>
-			  </div>
-			</div>
-		  </div>
-		</div>
-		
-		<div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
-		  <div class="row justify-content-center">
-			<div class="col-md-7 ftco-animate text-center">
-			  <h2>More projects on<span> Github </span> </h2>
-			  <div class="heading"> 
-				<h4> I love to solve business problems &amp; uncover hidden data stories </h4>
-				<br>
-				<p><a href="https://github.com/Amityadav10x" class="btn btn-primary py-3 px-5">GitHub</a></p>
-			  </div>
-			</div>
-		  </div>
-		</div>
+  <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+    <div class="block-18">
+      <div class="text">
+        <strong class="number" id="achievements-counter" data-number="5">5+</strong>
+        <span>Achievements</span>
+      </div>
+    </div>
+  </div>
+  <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+    <div class="block-18">
+      <div class="text">
+        <strong class="number" id="projects-counter" data-number="20">20+</strong>
+        <span>Projects</span>
+      </div>
+    </div>
+  </div>
+  <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+    <div class="block-18">
+      <div class="text">
+        <strong class="number" id="mentored-counter" data-number="15">15+</strong>
+        <span>Mentored Aspiring Analyst</span>
+      </div>
+    </div>
+  </div>
+  <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+    <div class="block-18">
+      <div class="text">
+        <strong class="number" id="coffee-counter" data-number="1000">1000+</strong>
+        <span>Cups of coffee</span>
+      </div>
+    </div>
+  </div>
+</div>
+
 	  </section>
 	  
 	  
@@ -958,8 +962,8 @@
 					</div>
 					<h3 class="mb-4">Address</h3>
 					<p>
-						<a href="https://www.google.com/maps/search/?api=1&query=Ayodhya,+India" target="_blank">
-							Ayodhya, India
+						<!-- <a href="https://www.google.com/maps/search/?api=1&query=Ayodhya,+India" target="_blank"> -->
+							Gujrat, India
 						</a>
 					</p>
 				</div>
@@ -1055,6 +1059,3 @@
     
   </body>
 </html>
-
-
-
