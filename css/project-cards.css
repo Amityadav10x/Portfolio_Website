@@ -1,0 +1,407 @@
+/* ============================================
+   🎨 PREMIUM PROJECT CARDS ENHANCEMENTS (Subtle Version)
+   ============================================ */
+
+/* Project Card Container with Perspective for 3D Effect */
+.col-md-4.d-flex.ftco-animate {
+    perspective: 1000px;
+}
+
+/* Enhanced Blog Entry Card */
+.blog-entry {
+    position: relative;
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    transform-style: preserve-3d;
+    border: 1px solid rgba(255, 189, 57, 0.1);
+}
+
+/* Glassmorphism Effect */
+body.dark-mode .blog-entry {
+    background: rgba(26, 26, 26, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 189, 57, 0.2);
+}
+
+/* 3D Tilt Effect on Hover - More Subtle */
+.blog-entry:hover {
+    transform: translateY(-10px) rotateX(1deg) rotateY(1deg);
+    box-shadow: 0 20px 40px rgba(255, 189, 57, 0.15);
+}
+
+body.dark-mode .blog-entry:hover {
+    box-shadow: 0 20px 40px rgba(255, 189, 57, 0.2);
+}
+
+/* Animated Gradient Border - More Subtle */
+.blog-entry::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 16px;
+    padding: 2px;
+    background: linear-gradient(45deg,
+            #ffbd39,
+            #ff6b6b,
+            #4ecdc4,
+            #45b7d1,
+            #ffbd39);
+    background-size: 300% 300%;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    animation: gradientRotate 3s ease infinite;
+    z-index: -1;
+}
+
+.blog-entry:hover::before {
+    opacity: 0.6;
+}
+
+@keyframes gradientRotate {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Floating Animation */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.blog-entry {
+    animation: float 6s ease-in-out infinite;
+}
+
+.blog-entry:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.blog-entry:nth-child(3) {
+    animation-delay: 2s;
+}
+
+/* Enhanced Image Container - Reduced Height */
+.blog-entry .block-20 {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px 16px 0 0;
+    height: 200px;
+}
+
+/* Image Zoom and Brightness on Hover - More Subtle */
+.blog-entry:hover .block-20 {
+    transform: scale(1.03);
+}
+
+.blog-entry .block-20::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 189, 57, 0.1), rgba(69, 183, 209, 0.1));
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.blog-entry:hover .block-20::after {
+    opacity: 0.7;
+}
+
+/* Enhanced Text Content */
+.blog-entry .text {
+    padding: 25px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Project Title Enhancement */
+.blog-entry .text .heading {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.blog-entry .text .heading a {
+    font-size: 20px;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--heading-color), var(--primary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.blog-entry:hover .text .heading a {
+    transform: translateX(5px);
+}
+
+/* Tools Used Section Enhancement */
+.blog-entry .text h5 {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.blog-entry .text ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.blog-entry .text ul li {
+    display: inline-block;
+    padding: 6px 14px;
+    background: linear-gradient(135deg, rgba(255, 189, 57, 0.1), rgba(255, 189, 57, 0.05));
+    border: 1px solid rgba(255, 189, 57, 0.3);
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.blog-entry .text ul li:hover {
+    background: var(--primary-color);
+    color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 189, 57, 0.3);
+}
+
+/* Project Description with Read More Feature */
+.blog-entry .text p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--text-color);
+    margin-bottom: 10px;
+    opacity: 0.9;
+    max-height: 85px;
+    overflow: hidden;
+    position: relative;
+    transition: max-height 0.5s ease;
+}
+
+.blog-entry .text p.expanded {
+    max-height: 500px;
+}
+
+/* Read More Button - No Outline */
+.read-more-btn {
+    display: inline-block;
+    color: var(--primary-color);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: none;
+    background: none;
+    padding: 5px 0;
+    margin-top: 5px;
+    outline: none !important;
+}
+
+.read-more-btn:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.read-more-btn:hover {
+    color: var(--heading-color);
+    transform: translateX(3px);
+}
+
+.read-more-btn::after {
+    content: ' →';
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.read-more-btn.expanded::after {
+    content: ' ↑';
+    transform: rotate(0deg);
+}
+
+.read-more-btn:hover::after {
+    transform: translateX(3px);
+}
+
+/* Shine Effect on Hover */
+.blog-entry::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg,
+            transparent,
+            transparent 40%,
+            rgba(255, 255, 255, 0.1) 50%,
+            transparent 60%,
+            transparent);
+    transform: rotate(45deg);
+    transition: all 0.6s ease;
+    pointer-events: none;
+}
+
+.blog-entry:hover::after {
+    left: 100%;
+}
+
+/* Responsive Adjustments for Project Cards */
+@media (max-width: 768px) {
+    .blog-entry {
+        margin-bottom: 30px;
+    }
+
+    .blog-entry:hover {
+        transform: translateY(-8px);
+    }
+
+    .blog-entry .text .heading a {
+        font-size: 18px;
+    }
+}
+
+/* Dark Mode Specific Enhancements - More Subtle */
+body.dark-mode .blog-entry .text ul li {
+    background: linear-gradient(135deg, rgba(255, 189, 57, 0.1), rgba(255, 189, 57, 0.05));
+    border-color: rgba(255, 189, 57, 0.25);
+}
+
+body.dark-mode .blog-entry .text ul li:hover {
+    background: var(--primary-color);
+    color: #000;
+}
+
+/* Ripple Effect */
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 189, 57, 0.6);
+    width: 20px;
+    height: 20px;
+    animation: ripple-animation 0.6s ease-out;
+    pointer-events: none;
+}
+
+@keyframes ripple-animation {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(20);
+        opacity: 0;
+    }
+}
+
+/* Reveal Animation */
+.blog-entry.reveal-active {
+    animation: revealCard 0.8s ease-out forwards;
+}
+
+@keyframes revealCard {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Action Buttons on Hover */
+.project-actions {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    display: flex;
+    gap: 15px;
+    opacity: 0;
+    transition: opacity 0.4s ease 0.1s;
+}
+
+.blog-entry:hover .project-actions {
+    opacity: 1;
+}
+
+.project-action-btn {
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #ffbd39, #ff9f1a);
+    color: #000;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 189, 57, 0.4);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.project-action-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 189, 57, 0.6);
+    color: #000;
+}
+
+/* Overlay for action buttons - More Subtle */
+.blog-entry .block-20::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 2;
+}
+
+.blog-entry:hover .block-20::before {
+    opacity: 1;
+}

@@ -1,0 +1,299 @@
+/* ============================================
+   🎨 HERO SECTION ENHANCEMENTS
+   ============================================ */
+
+/* 1. Animated Background Particles */
+#home-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.particles-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: float-particle 20s infinite ease-in-out;
+}
+
+@keyframes float-particle {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(100px, -100px);
+    }
+
+    50% {
+        transform: translate(-50px, -200px);
+    }
+
+    75% {
+        transform: translate(-100px, -100px);
+    }
+}
+
+/* Particle variations */
+.particle:nth-child(1) {
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.particle:nth-child(2) {
+    top: 40%;
+    left: 20%;
+    animation-delay: 2s;
+    width: 6px;
+    height: 6px;
+}
+
+.particle:nth-child(3) {
+    top: 60%;
+    left: 30%;
+    animation-delay: 4s;
+}
+
+.particle:nth-child(4) {
+    top: 80%;
+    left: 40%;
+    animation-delay: 6s;
+    width: 5px;
+    height: 5px;
+}
+
+.particle:nth-child(5) {
+    top: 30%;
+    left: 60%;
+    animation-delay: 8s;
+}
+
+.particle:nth-child(6) {
+    top: 50%;
+    left: 70%;
+    animation-delay: 10s;
+    width: 7px;
+    height: 7px;
+}
+
+.particle:nth-child(7) {
+    top: 70%;
+    left: 80%;
+    animation-delay: 12s;
+}
+
+.particle:nth-child(8) {
+    top: 90%;
+    left: 90%;
+    animation-delay: 14s;
+    width: 4px;
+    height: 4px;
+}
+
+.particle:nth-child(9) {
+    top: 15%;
+    left: 50%;
+    animation-delay: 16s;
+}
+
+.particle:nth-child(10) {
+    top: 85%;
+    left: 15%;
+    animation-delay: 18s;
+    width: 6px;
+    height: 6px;
+}
+
+/* 2. Profile Image - Subtle Animated Ring Effect */
+.profile-image {
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 3px rgba(255, 189, 57, 0.3),
+        0 0 20px rgba(255, 189, 57, 0.2);
+    animation: ring-pulse 3s ease-in-out infinite;
+    transition: all 0.3s ease;
+}
+
+.profile-image:hover {
+    box-shadow:
+        0 0 0 3px rgba(255, 189, 57, 0.5),
+        0 0 30px rgba(255, 189, 57, 0.4);
+    transform: scale(1.02);
+}
+
+@keyframes ring-pulse {
+
+    0%,
+    100% {
+        box-shadow:
+            0 0 0 3px rgba(255, 189, 57, 0.3),
+            0 0 20px rgba(255, 189, 57, 0.2);
+    }
+
+    50% {
+        box-shadow:
+            0 0 0 3px rgba(255, 189, 57, 0.5),
+            0 0 25px rgba(255, 189, 57, 0.3);
+    }
+}
+
+/* 3. Text Gradient Animation on Name */
+.hero h1 span {
+    background: linear-gradient(90deg,
+            #ffbd39 0%,
+            #ff6b6b 25%,
+            #4ecdc4 50%,
+            #45b7d1 75%,
+            #ffbd39 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-flow 3s linear infinite;
+}
+
+@keyframes gradient-flow {
+    0% {
+        background-position: 0% center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
+}
+
+/* 5. Enhanced Typing Effect with Better Cursor */
+#typing-animation {
+    position: relative;
+    display: inline-block;
+}
+
+#typing-animation::after {
+    content: '|';
+    position: absolute;
+    right: -10px;
+    animation: blink-cursor 0.8s step-end infinite;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+@keyframes blink-cursor {
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
+}
+
+/* 7. Scroll Indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.scroll-indicator:hover {
+    transform: translateX(-50%) translateY(-5px);
+}
+
+.scroll-mouse {
+    width: 30px;
+    height: 50px;
+    border: 2px solid var(--primary-color);
+    border-radius: 15px;
+    position: relative;
+    margin: 0 auto 10px;
+}
+
+.scroll-wheel {
+    width: 4px;
+    height: 10px;
+    background: var(--primary-color);
+    border-radius: 2px;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scroll-wheel 2s infinite;
+}
+
+@keyframes scroll-wheel {
+    0% {
+        top: 10px;
+        opacity: 1;
+    }
+
+    100% {
+        top: 30px;
+        opacity: 0;
+    }
+}
+
+.scroll-text {
+    color: var(--primary-color);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    animation: bounce-text 2s infinite;
+}
+
+@keyframes bounce-text {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Ensure hero content is above particles */
+.hero .slider-text {
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .particle {
+        width: 3px;
+        height: 3px;
+    }
+
+    .scroll-indicator {
+        bottom: 20px;
+    }
+
+    .scroll-mouse {
+        width: 25px;
+        height: 40px;
+    }
+}
