@@ -22,6 +22,1182 @@
 	<link rel="stylesheet" href="css/flaticon.css">
 	<link rel="stylesheet" href="css/icomoon.css">
 	<link rel="stylesheet" href="css/style.css">
+
+
+
+	<style>
+		/*======================================
+//--//-->   ABOUT
+======================================*/
+
+		.about-mf .box-shadow-full {
+			padding-top: 4rem;
+			padding-bottom: 4rem;
+		}
+
+		.about-mf .box-shadow-full .about-info {
+			padding: 0 2rem;
+		}
+
+
+
+		.about-mf .about-img {
+			margin-bottom: 2rem;
+		}
+
+		.about-mf .about-img img {
+			margin-left: 10px;
+		}
+
+
+		.skill-mf .progress {
+			/* background-color: #cde1f8; */
+			margin: .5rem 0 1.2rem 0;
+			border-radius: 0;
+			height: .7rem;
+		}
+
+		.skill-mf .progress .progress-bar {
+			height: .7rem;
+			background-color: #ffbd39;
+		}
+
+
+		/* Animation styles */
+		#typing-animation {
+			position: relative;
+			font-size: 30px;
+			font-weight: bold;
+			color: rgb(255, 255, 255);
+			overflow: hidden;
+			white-space: nowrap;
+			animation: typing 3s steps(20, end) infinite;
+		}
+
+		#typing-animation:before {
+			content: "";
+			/* position: absolute; */
+			top: 0;
+			left: 0;
+			width: 0;
+			height: 100%;
+			background-color: #ccc;
+			animation: typing-cursor 0.5s ease-in-out infinite;
+		}
+
+
+
+
+		@keyframes typing {
+			from {
+				width: 0;
+			}
+
+			to {
+				width: 100%;
+			}
+		}
+
+		@keyframes typing-cursor {
+			from {
+				width: 5px;
+			}
+
+			to {
+				width: 0;
+			}
+		}
+
+		/* Base styles */
+		.typing-text {
+			display: inline-block;
+			overflow: hidden;
+			border-right: 2px solid black;
+			white-space: nowrap;
+			animation: typing 4s steps(30, end), typing-cursor 0.75s step-end infinite;
+		}
+
+		/* Media queries for responsiveness */
+		@media (max-width: 1200px) {
+			.typing-text {
+				font-size: 1.5em;
+				animation-duration: 5s;
+				/* Slower animation for smaller screens */
+			}
+		}
+
+		@media (max-width: 768px) {
+			.typing-text {
+				font-size: 1.2em;
+				animation-duration: 6s;
+			}
+		}
+
+		@media (max-width: 480px) {
+			.typing-text {
+				font-size: 1em;
+				animation-duration: 7s;
+			}
+		}
+
+
+		/* project image zoom effect */
+
+		.zoom-effect {
+			overflow: hidden;
+			transition: transform 0.3s ease-out;
+		}
+
+		.zoom-effect:hover {
+			transform: scale(1.1);
+		}
+
+
+
+		.image-wrapper {
+			position: relative;
+			margin-top: 100px;
+		}
+
+		.image-wrapper {
+			position: relative;
+			margin-top: 120px;
+			margin-left: 100px;
+			/* ← This shifts the image slightly to the right */
+		}
+
+		.profile-image {
+			max-width: 80%;
+			display: block;
+		}
+
+
+		.hover-circle {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 50px;
+			height: 50px;
+			background-color: #ffbd39;
+			border-radius: 50%;
+			opacity: 0;
+			transition: opacity 0.3s ease;
+		}
+
+		.image-wrapper:hover .hover-circle {
+			opacity: 1;
+		}
+
+		.btn-primary:hover {
+			transform: scale(1.05);
+		}
+
+		.btn-white:hover {
+			transform: scale(1.05);
+		}
+
+		.btn {
+			transition: transform 0.5s ease, background-color 0.3s ease;
+		}
+
+		/* Fix image scaling and alignment */
+		.block-20 {
+			height: 200px;
+			/* Uniform height for all images */
+			background-size: cover;
+			/* Ensures images cover the entire block */
+			background-position: center;
+			/* Centers images */
+			border-radius: 5px;
+			/* Optional: rounded corners for aesthetics */
+		}
+
+		/* Zoom effect */
+		.zoom-effect {
+			overflow: hidden;
+			transition: transform 0.3s ease-out;
+			/* Smooth zoom effect */
+		}
+
+		.zoom-effect:hover {
+			transform: scale(1.1);
+			/* Slight zoom on hover */
+		}
+
+		/* Responsive layout adjustments */
+		@media (max-width: 768px) {
+			.block-20 {
+				height: 150px;
+				/* Smaller image height on mobile */
+			}
+
+			.heading-section h2 {
+				font-size: 1.5rem;
+				/* Adjust heading size for smaller screens */
+			}
+		}
+
+
+		.text p {
+			max-height: 100px;
+			/* Adjust to control visible text height */
+			overflow-y: auto;
+			margin-bottom: 1em;
+			/* Spacing between text and next section */
+			scrollbar-width: thin;
+			/* Makes the scrollbar narrower */
+			scrollbar-color: black rgba(237, 232, 232, 0.227);
+			/* Scrollbar thumb is black, track is white */
+		}
+
+		/* For WebKit Browsers */
+		.text p::-webkit-scrollbar {
+			width: 8px;
+			/* Width of the scrollbar */
+		}
+
+		.text p::-webkit-scrollbar-track {
+			background: white;
+			/* Scrollbar track color */
+		}
+
+		.text p::-webkit-scrollbar-thumb {
+			background-color: black;
+			/* Scrollbar thumb color */
+			border-radius: 10px;
+			/* Rounded edges for the thumb */
+		}
+
+		.text p::-webkit-scrollbar-thumb:hover {
+			background-color: #555;
+			/* Slightly lighter black on hover */
+		}
+	</style>
+
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+		<div class="container">
+			<a class="navbar-brand" href="index.html"> ProcessPro </a>
+			<button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
+				data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="oi oi-menu"></span> Menu
+			</button>
+
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav nav ml-auto">
+					<li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+					<li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+
+					<li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+					<!-- <li class="nav-item"><a href="#education-section" class="nav-link"><span>Education</span></a></li> -->
+					<li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<section id="home-section" class="hero">
+		<div class="home-slider owl-carousel">
+			<div class="slider-item">
+				<div class="overlay"></div>
+				<div class="container">
+					<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end"
+						data-scrollax-parent="true">
+						<div class="one-third js-fullheight order-md-last img-container">
+							<div class="image-wrapper">
+								<img src="images/Amit_IMG_.png" alt="Amit" class="profile-image">
+								<div class="hover-circle"></div>
+							</div>
+							<div class="overlay"></div>
+						</div>
+						<div class="one-forth d-flex align-items-center ftco-animate"
+							data-scrollax=" properties: { translateY: '70%' }">
+							<div class="text">
+								<span class="subheading">Hello!</span>
+								<h1 class="mb-4 mt-3">I'm <span>Amit</span></h1>
+
+								<!-- Element to contain animated typing -->
+								<span id="typing-animation"></span>
+
+								<script>
+									// Initialize the typing animation
+									const typingAnimationElement = document.getElementById('typing-animation');
+
+									// Create an array of typing text
+									const typingTexts = [
+										'Analytical  ',
+										'Resilient  ',
+										'Relentless   ',
+									];
+
+									// Create a function to display the typing animation for a given text
+									function playTypingAnimation(text) {
+										// Loop through each character and add it to the element
+										for (let i = 0; i < text.length; i++) {
+											setTimeout(() => {
+												typingAnimationElement.textContent += text[i];
+											}, i * 200); // Increase the delay to slow down the typing animation
+										}
+
+										// Once the animation is complete, reset the text and start over
+										setTimeout(() => {
+											typingAnimationElement.textContent = '';
+											playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+										}, text.length * 200);
+									}
+
+									// Start the typing animation loop
+									playTypingAnimation(typingTexts[0]);
+
+								</script>
+
+								<br>
+								<br>
+
+
+								<h2>AI Automation Engineer</h2>
+								<!-- <p class="mb-4">I am an AI Automation Engineer with a passion for leveraging data to drive business insights and operational efficiency. My expertise lies in building scalable data pipelines, automating workflows, and creating interactive dashboards to visualize complex datasets.</p> -->
+								<a href="https://www.linkedin.com/in/yadavamit10x"
+									class="btn btn-primary py-3 px-4">Linkedin</a>
+								<a href="https://github.com/Amityadav10x"
+									class="btn btn-white btn-outline-white py-3 px-3" style="margin-left: 60px;">My
+									works</a>
+
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+
+	<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+		<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+					<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+										<div class="about-img">
+											<img src="images/Amit's Photo-photoaidcom-cropped.jpg"
+												class="img-fluid rounded b-shadow-a" alt="Amit's Profile">
+										</div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+										<div class="about-info">
+											<p><span class="title-s">Name: </span> <span>Amit Yadav</span></p>
+											<p><span class="title-s">Job Role: </span> <span> AI Automation
+													Engineer</span></p>
+											<p><span class="title-s">Experience: </span> <span>6 Months</span></p>
+											<p><span class="title-s">Address: </span> <span> Gujrat, India</span></p>
+										</div>
+									</div>
+								</div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>Machine Learning</span> <span class="pull-right">70%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 70%;"
+											aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>Python</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%"
+											aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>Power BI , Looker Pro, Tableau</span> <span class="pull-right">70</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 70%"
+											aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>n8n</span> <span class="pull-right">70%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 70%"
+											aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>SQL</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%"
+											aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>Java Script , JSON</span> <span class="pull-right">70%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 70%"
+											aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<ul class="about-info mt-4 px-md-0 px-2">
+							<li class="d-flex"><span>Profile:</span><span>AI-Powered Data Analyst & Machine Learning
+									Engineer</span></li>
+							<li class="d-flex"><span>Education:</span><span>Bachelor of Computer Applications in
+									Artificial Intellingence</span></li>
+							<li class="d-flex"><span>Programming & Scripting:</span><span>Python, SQL, DAX, Power Query,
+									JavaScript</span></li>
+							<li class="d-flex"><span>Data Analysis & Visualization:</span><span>Power BI, Tableau,
+									Matplotlib, Seaborn</span></li>
+							<li class="d-flex"><span>Machine Learning & Modeling:</span><span>scikit-learn, Pandas,
+									NumPy,Matplotlib Jupyter Notebook, Feature Engineering</span></li>
+							<li class="d-flex"><span>Data Processing & Automation:</span><span>n8n, API Integration, ETL
+									Workflows, Webhooks</span></li>
+							<li class="d-flex"><span>AI & API Integration:</span><span>OpenAI API, Anthropic API
+									(Claude), LangChain, Custom Workflow Automation</span></li>
+							<li class="d-flex"><span>Storage & Databases:</span><span>SQL, BigQuery, Snowflake</span>
+							</li>
+							<li class="d-flex"><span>Business & Analytical Skills:</span><span>Data Cleaning, Data
+									Modeling, Dashboard Reporting, Business Intelligence, Process Automation</span></li>
+							<li class="d-flex"><span>Additional Skills:</span><span>Git, GitHub, etc</span></li>
+						</ul>
+					</div>
+
+
+
+					<div class="counter-wrap ftco-animate d-flex mt-md-3">
+						<div class="text">
+							<p class="mb-4">
+								<span class="number" data-number="20">0</span> <span>+</span>
+								<span>&nbsp; Projects completed</span>
+							</p>
+							<p><a href="https://www.linkedin.com/in/amit-yadav-10x"
+									class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</section>
+
+
+
+
+
+	<section class="ftco-section ftco-no-pb" id="#">
+		<div class="container">
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-10 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Vision</h1>
+					<h2 class="mb-4">Vision</h2>
+					<p>To automate with purpose — transforming repetitive tasks into efficient, intelligent processes
+						that scale with business needs.</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<h1 class="big-4">Experience</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">April 2025 - Present</span>
+						<h2>AI Automation Engineer</h2>
+						<span class="position">Electric Octopus</span>
+						<br>
+						<span class="position">London, United Kingdom (Remote)</span>
+						<p class="mt-4">
+							At Electric Octopus, I architect and design robust automation and development solutions,
+							focusing on scalable workflows and clear system documentation to enable seamless execution
+							by development teams.
+						</p>
+						<ul>
+							<li>Design and deliver technical flowcharts, workflow diagrams, and system architectures for
+								new automation and web application projects.</li>
+							<li>Build production-ready automated workflows and integrations using n8n, optimizing
+								cross-platform data flow and reliability.</li>
+							<li>Bridge the gap between business requirements and technical execution, ensuring
+								developers have precise blueprints and system logic to accelerate implementation.</li>
+							<li>Lead architectural discussions at project kickoff, mapping out end-to-end data movement,
+								API connections, transformation logic, and integration points.</li>
+							<li>Continuously refine documentation and workflow architecture based on feedback to drive
+								clarity, reduce bottlenecks, and ensure successful project launches.</li>
+						</ul>
+						<!-- Add the clickable link below -->
+						<!-- <a href="https://github.com/Amityadav10x/Electric-Octopus-Automation-Engineer-Projects" class="btn btn-primary mt-3">Click Here To See The Work</a> -->
+					</div>
+				</div>
+
+
+
+				<!-- <div class="col-md-6">
+				<div class="resume-wrap ftco-animate">
+					<span class="date">June 24 - July 24</span>
+					<h2>Business Analyst</h2>
+					<span class="position">YBI Foundation</span>
+					<p class="mt-4">YBI Foundation, specializing in business analysis, provided valuable insights into business processes and strategies.</p>
+					<ul>
+						<li>Engaged in analyzing business data to optimize operations and decision-making.</li>
+						<li>Utilized analytical tools to extract meaningful insights for improving business performance.</li>
+						<li>Contributed to project teams by providing data-driven recommendations and solutions.</li>
+					</ul>
+				</div>
+			</div> -->
+
+				<!-- <div class="col-md-6">
+
+                <div class="resume-wrap ftco-animate">
+					<span class="date">December 24 - January 24</span>
+					<h2>Machine-Learning</h2>
+					<span class="position">Atharvo</span>
+					<p class="mt-4">Atharvo</p>
+					<ul>
+						<li>Acquired hands-on experience in machine learning through projects focusing on data preprocessing, model training, and evaluation.</li>
+						<li>Strengthened skills in data analysis and optimization techniques.</li>
+						<li>Applied machine learning algorithms to real-world datasets, enhancing practical knowledge in the field.</li>
+					</ul>
+				</div>
+			</div> -->
+			</div>
+
+
+			<br>
+			<br>
+
+			<div class="row">
+				<h1 class="big-4">Education</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2022-2025</span>
+						<h2>Bachelor of Computer Science</h2>
+						<span class="position">United University</span>
+						<p class="mt-3">Grade: First class distinction.</p>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2019-2021</span>
+						<h2>Higher Secondary School</h2>
+						<span class="position">Kishan Inter college</span>
+						<p class="mt-3">Grade: First class distinction.</p>
+					</div>
+				</div>
+			</div>
+
+
+
+			<div class="row justify-content-center mt-5">
+				<div class="col-md-6 text-center ftco-animate">
+					<p><a href="https://drive.google.com/file/d/1Q95e0RggBuhPAGuJTv5ENLyrTq1F7o7s/view?usp=sharing"
+							class="btn btn-primary py-4 px-5">Download CV</a></p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="ftco-section" id="project-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-5">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Projects</h1>
+					<h2 class="mb-4">Projects</h2>
+					<p>Below are the sample Data & Business Analytics projects on Microsoft Power BI, Advance
+						Excel,Tableaue & Machine learning.</p>
+
+				</div>
+			</div>
+			<div class="row d-flex">
+
+
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/Amityadav10x/OYO-Rooms-Data-Analysis" class="block-20 zoom-effect"
+							style="background-image: url('images/oyo.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a href="https://github.com/Amityadav10x/OYO-Rooms-Data-Analysis">OYO
+									Rooms Revenue & Booking Analysis</a></h3>
+							<p>Developed an interactive Power BI dashboard to analyze OYO Rooms' revenue, bookings,
+								cancellations, and guest behavior. Key insights include 57.87% occupancy rate, 24.83%
+								cancellation rate, and Elite & Premium rooms driving the highest revenue. The analysis
+								highlights opportunities for dynamic pricing, flexible cancellation policies, and
+								enhanced customer retention strategies.</p>
+							<h5 class="mt-3">Tools Used:</h5>
+							<ul>
+								<li>Power BI , SQL</li>
+
+							</ul>
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/Amityadav10x/Power-BI-Projects/tree/d76a41b4cb2b8a43fc25ba0e629ae53feeadfb8f/Transport%20And%20Mobility%20Analysis"
+							class="block-20 zoom-effect" style="background-image: url('images/1.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://app.powerbi.com/groups/me/reports/5b6ffb4d-7a9c-42a2-ba7b-f48b698333bb/62898ee0d6c892c925b6?experience=power-bi">Urban
+									Ride-Sharing Market Intelligence Dashboard </a></h3>
+							<p>Designed and built an interactive Power BI dashboard analyzing 426K cab trips across 10+
+								cities to uncover revenue drivers, fare disparities, and seasonal demand patterns.
+								Explored key metrics including repeat passenger rates (25.7%), trip completion (99.3%),
+								and city-wise performance to identify $108M revenue opportunities and 4x fare gaps.
+								Delivered targeted recommendations for route optimization, loyalty programs, and dynamic
+								resource allocation, enabling data-driven operations and improved customer satisfaction.
+							</p>
+							<h5 class="mt-3">Tools Used:</h5>
+							<ul>
+								<li>Power BI , SQL , Power Query</li>
+
+							</ul>
+						</div>
+					</div>
+				</div>
+
+
+
+
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/Amityadav10x/Power-BI-Projects/tree/4485d00f77358339af3c8a6a41f8f5c75a73e6b7/AtiliQ%20Motors%20Sales%20Analysis"
+							class="block-20 zoom-effect" style="background-image: url('images/State\ Wise.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h4 class="heading"><a
+									href="https://github.com/Amityadav10x/Power-BI-Projects/tree/4485d00f77358339af3c8a6a41f8f5c75a73e6b7/AtiliQ%20Motors%20Sales%20Analysis">EV
+									Market Expansion: Competitive Intelligence & Strategic Insights</a></h4>
+							<p>Analyzed 1M+ EV sales and mapped 12.15K charging stations across 10+ Indian states using
+								Power BI to uncover geographic trends, infrastructure gaps, and market penetration
+								drivers. Benchmarked 26 manufacturers, identifying OLA Electric as the market leader
+								(23.7% share) and Maharashtra and Karnataka as regions contributing over 70% of total
+								sales. Delivered interactive dashboards for executive decision-making on sales strategy,
+								infrastructure investment, and state-by-state EV adoption forecasting.</p>
+							<h5 class="mt-3">Tools Used:</h5>
+							<ul>
+								<li>Power BI , SQL, Excel</li>
+
+							</ul>
+						</div>
+					</div>
+				</div>
+
+
+
+
+
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/Amityadav10x/Power_BI_Projects/tree/99afe2d6bae231ca3288b3070d8ab0d48e3b5249/Hospitality_Domain"
+							class="block-20 zoom-effect" style="background-image: url('images/Hotel.webp');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://github.com/Amityadav10x/Power_BI_Projects/tree/99afe2d6bae231ca3288b3070d8ab0d48e3b5249/Hospitality_Domain">Hotel
+									operations insights</a></h3>
+							<p>Leveraged Power BI for data-driven hotel improvements. Analyzed guest satisfaction,
+								operations, and revenue. Identified booking trends, service gaps, and optimized pricing
+								strategies.</p>
+							<h5 class="mt-3">Tools Used:</h5>
+							<ul>
+								<li>Power BI , SQL, Excel</li>
+
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/Amityadav10x/Power_BI_Projects/tree/cde104a8d5c12579527119817ef7008282fbe14b/Healthcare_Provider_Data_Analysis"
+							class="block-20 zoom-effect" style="background-image: url('images/dashboard2.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://github.com/Amityadav10x/Power_BI_Projects/tree/cde104a8d5c12579527119817ef7008282fbe14b/Healthcare_Provider_Data_Analysis">Hospital
+									Data Analysis</a></h3>
+							<p>This project is an interactive healthcare navigator dashboard designed to provide a
+								comprehensive view of various healthcare metrics.</p>
+							<h5 class="mt-3">Tools Used:</h5>
+							<ul>
+								<li>Power BI , SQL, Excel</li>
+
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://public.tableau.com/app/profile/amit.yadav1284/viz/ElectricVechileTablueProject/Dashboard1?publish=yes"
+							class="block-20 zoom-effect" style="background-image: url(images/Electric_Vehicle.avif);">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading">
+								<a
+									href="https://public.tableau.com/app/profile/amit.yadav1284/viz/ElectricVechileTablueProject/Dashboard1?publish=yes">Electric
+									Vehicle Data Insights</a>
+							</h3>
+							<p>Created an interactive Tableau dashboard analyzing EV trends. Highlights include Tesla's
+								market leadership, adoption growth, and key performance metrics like average EV range
+								and top models.</p>
+							<h5 class="mt-3">Tools Used:</h5>
+							<ul>
+								<li>Tableau , SQL, Excel</li>
+
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/Amityadav10x/Power_BI_Projects/tree/a08fa07b914d5a23eedc31ef94e91ac7dfdcf6f1/Blinkit_Store_Analysis"
+							class="block-20 zoom-effect"
+							style="background-image: url('images/Blinkit\ -\ Sales.jpeg');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://github.com/Amityadav10x/Power_BI_Projects/tree/a08fa07b914d5a23eedc31ef94e91ac7dfdcf6f1/Blinkit_Store_Analysis">Market
+									Performance Analysis</a></h3>
+							<p>This Power BI dashboard provides an in-depth analysis of sales data for Blinkit, focusing
+								on various aspects such as item type performance, outlet performance, customer ratings,
+								and sales trends over time.</p>
+							<h5 class="mt-3">Tools Used:</h5>
+							<ul>
+								<li>Power BI , SQL, Excel</li>
+
+							</ul>
+						</div>
+					</div>
+				</div>
+
+
+
+
+
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/Amityadav10x/Excel_Projects/tree/main/Coffe_Sales_Report"
+							class="block-20 zoom-effect" style="background-image: url('images/proj_1.webp');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading">
+								<a href="https://github.com/Amityadav10x/Excel_Projects/tree/main/Coffe_Sales_Report">Coffee
+									Sales Data Analysis using Excel</a>
+							</h3>
+							<p>
+								Utilized advanced Excel analytics to conduct a comprehensive analysis of coffee shop
+								sales data.
+								This project highlights key sales trends, top-performing products, and customer purchase
+								behavior.
+								Analyzed seasonal sales patterns to assist in inventory management and marketing
+								strategies.
+							</p>
+							<h5 class="mt-3">Tools Used:</h5>
+							<ul>
+								<li>Excel</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/Amityadav10x/Machine_learning_Projects/blob/main/Machine_learning_project/Crop%20Reccomendation%20System/Crop%20Reccomendation%20System.ipynb"
+							class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading">
+								<a
+									href="https://github.com/Amityadav10x/Machine_learning_Projects/tree/main/Machine_learning_project/Crop%20Reccomendation%20System">Precision
+									Agriculture ML Model: Crop Yield Prediction </a>
+							</h3>
+							<p>
+								Developed a machine learning–driven crop recommendation system analyzing 2,200
+								agriculture records across 7 soil and climate features (N, P, K, temperature, humidity,
+								pH, rainfall). Evaluated 10 algorithms and optimized Random Forest to achieve 99.77%
+								accuracy in predicting 22 crop types. Interactive web interface enables users to enter
+								field conditions and receive best crop suggestions, supporting sustainable and
+								data-driven farming practices.
+							</p>
+							<h5 class="mt-3">Tools Used:</h5>
+							<ul>
+								<li>Python, Machine Learning</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/Amityadav10x/SQL_PROJECTS/tree/768cb743f2211986495477e231ebeab2021fef8c/Bank_Report_Analysis"
+							class="block-20 zoom-effect" style="background-image: url('images/bank\ sql.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://github.com/Amityadav10x/SQL_PROJECTS/tree/768cb743f2211986495477e231ebeab2021fef8c/Bank_Report_Analysis">Bank
+									Loan Report Analysis Using SQL</a></h3>
+							<p>Performed sql quires using SSMS and analyze key banking metrics, including loan
+								applications, funded amounts, and customer segmentation.</p>
+							<h5 class="mt-3">Tools Used:</h5>
+							<ul>
+								<li>SQL ,SSMS</li>
+
+							</ul>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<br>
+
+		</div>
+	</section>
+
+
+	<!-- <section class="ftco-section" id="certifications-section"> -->
+	<!-- <div class="container">
+			<div class="row justify-content-center mb-5 pb-5">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Certifications</h1>
+					<h2 class="mb-4">Certifications</h2>
+					<p>Below are some recognitions and Certifications.</p>
+				</div>
+			</div>
+			<div class="row d-flex"> -->
+	<!-- Certification 1 -->
+	<!-- <div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://courses.ibmcep.cognitiveclass.ai/certificates/9ee5906c354543b7b230430f6608b1e4" 
+						   class="block-20 zoom-effect" 
+						   style="background-image: url('images/IBM\ DV.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading">
+								<a href="https://courses.ibmcep.cognitiveclass.ai/certificates/9ee5906c354543b7b230430f6608b1e4">Data Visualization</a>
+							</h3>
+						</div>
+					</div>
+				</div> -->
+
+	<!-- Certification 2 -->
+	<!-- <div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://courses.ibmcep.cognitiveclass.ai/certificates/d3a4e8e17bb14ab086ff3b09f65daea6" 
+						   class="block-20 zoom-effect" 
+						   style="background-image: url('images/IBM\ PYTHON.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading">
+								<a href="https://courses.ibmcep.cognitiveclass.ai/certificates/d3a4e8e17bb14ab086ff3b09f65daea6">Python</a>
+							</h3>
+						</div>
+					</div>
+				</div>
+	 -->
+	<!-- Certification 3 -->
+	<!-- <div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://courses.ibmcep.cognitiveclass.ai/certificates/437b27fcf609480ca5bcefab33fd0879" 
+						   class="block-20 zoom-effect" 
+						   style="background-image: url('images/Data\ Sciecne.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading">
+								<a href="https://courses.ibmcep.cognitiveclass.ai/certificates/437b27fcf609480ca5bcefab33fd0879">Data Science 101</a>
+							</h3>
+						</div>
+					</div>
+				</div>
+	 -->
+	<!-- Certification 4 -->
+	<!-- <div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="#" class="block-20 zoom-effect" 
+						   style="background-image: url('images/power\ bi\ simulation.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading"><a href="#">Power BI</a></h3>
+						</div>
+					</div>
+				</div> -->
+
+	<!-- Certification 5 -->
+	<!-- <div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://www.udemy.com/certificate/UC-e764ce2e-50ab-47ed-b81b-624f73d55aef/" 
+						   class="block-20 zoom-effect" 
+						   style="background-image: url('images/Excel.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading">
+								<a href="https://www.udemy.com/certificate/UC-e764ce2e-50ab-47ed-b81b-624f73d55aef/">Excel</a>
+							</h3>
+						</div>
+					</div>
+				</div> -->
+
+	<!-- Certification 6 -->
+	<!-- <div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="#" 
+						   class="block-20 zoom-effect" 
+						   style="background-image: url('images/essensials.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading">
+								<a href="#">Data Analysis Essentials</a>
+							</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> -->
+	<!-- </section> -->
+
+
+
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+		<div class="container">
+			<div class="row d-md-flex align-items-center">
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							<strong class="number" id="achievements-counter" data-number="5">5+</strong>
+							<span>Achievements</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							<strong class="number" id="projects-counter" data-number="20">20+</strong>
+							<span>Projects</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							<strong class="number" id="mentored-counter" data-number="15">15+</strong>
+							<span>Mentored Aspiring Analyst</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							<strong class="number" id="coffee-counter" data-number="1000">1000+</strong>
+							<span>Cups of coffee</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+	</section>
+
+
+
+
+
+
+
+
+	<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Contact</h1>
+					<h2 class="mb-4">Contact Me</h2>
+					<p>Below are the details to reach out to me!</p>
+				</div>
+			</div>
+
+			<div class="row d-flex contact-info mb-5">
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-map-signs"></span>
+						</div>
+						<h3 class="mb-4">Address</h3>
+						<p>
+							<!-- <a href="https://www.google.com/maps/search/?api=1&query=Ayodhya,+India" target="_blank"> -->
+							Gujrat, India
+							</a>
+						</p>
+					</div>
+				</div>
+
+
+
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-phone2"></span>
+						</div>
+						<h3 class="mb-4">Contact Number</h3>
+						<p><a href="tel://6354399293">+91-6354399293</a></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-paper-plane"></span>
+						</div>
+						<h3 class="mb-4">Email Address</h3>
+						<p><a href="mailto:amityadav10x@gmail.com">amityadav10x@gmail.com</a></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-globe"></span>
+						</div>
+						<h3 class="mb-4">Download Resume</h3>
+						<p><a href="https://drive.google.com/file/d/1Q95e0RggBuhPAGuJTv5ENLyrTq1F7o7s/view?usp=sharing">Click
+								Me</a></p>
+					</div>
+				</div>
+
+				<div class="container">
+					<br>
+					<br>
+					<div class="row justify-content-center">
+						<div class="col-md-7 ftco-animate text-center">
+							<h2>Have a<span> Question? </span> <a
+									href="https://docs.google.com/forms/d/e/1FAIpQLSeRx0FxD-PnSkT-LvmPrGwAgHAcQ-c3nLOF0DHcaFnV_fcUjg/viewform?usp=sf_link"
+									class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+						</div>
+					</div>
+					<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+						<li class="ftco-animate normal-txt">Find me on </li>
+
+						<li class="ftco-animate"><a
+								href="https://www.linkedin.com/in/amit-yadav-417bb5288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><span
+									class="icon-linkedin"></span></a></li>
+						<li class="ftco-animate"><a
+								href="https://x.com/Amityadav874?t=juezju50e7V6tRuckHPgVw&s=09"><span
+									class="icon-twitter"></span></a></li>
+						<li class="ftco-animate"><a
+								href="https://www.facebook.com/Amit.yadav.635439?mibextid=ZbWKwL"><span
+									class="icon-facebook"></span></a></li>
+						<!-- <li class="ftco-animate"><a href="https://www.instagram.com/yaduvanshi_amit?igsh=ZGtneDRibnJsa3F0"><span class="icon-instagram"></span></a></li> -->
+					</ul>
+					<br>
+				</div>
+			</div>
+	</section>
+
+
+
+
+	<footer class="ftco-footer ftco-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+
+					<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						Copyright &copy;
+						<script>document.write(new Date().getFullYear());</script> All rights reserved | This Project is
+						made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="#"
+							target="_blank">Amit</a>
+						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- loader -->
+	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+				stroke="#F96D00" />
+		</svg></div>
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/jquery.stellar.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/aos.js"></script>
+	<script src="js/jquery.animateNumber.min.js"></script>
+	<script src="js/scrollax.min.js"></script>
+
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Amit Portfolio</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<link rel="stylesheet" href="css/aos.css">
+
+	<link rel="stylesheet" href="css/ionicons.min.css">
+
+	<link rel="stylesheet" href="css/flaticon.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/style.css">
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 	<link rel="stylesheet" href="css/custom-theme.css">
 	<link rel="stylesheet" href="css/project-cards.css">
