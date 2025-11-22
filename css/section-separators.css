@@ -1,0 +1,86 @@
+/* ============================================
+   📏 SECTION SEPARATORS
+   ============================================ */
+
+/* Add elegant separator lines between sections */
+section {
+    position: relative;
+}
+
+/* Separator line after each section */
+section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 1200px;
+    height: 1px;
+    background: linear-gradient(to right,
+            transparent,
+            rgba(255, 189, 57, 0.3) 20%,
+            rgba(255, 189, 57, 0.6) 50%,
+            rgba(255, 189, 57, 0.3) 80%,
+            transparent);
+}
+
+/* Dark mode separator */
+body.dark-mode section::after {
+    background: linear-gradient(to right,
+            transparent,
+            rgba(255, 189, 57, 0.4) 20%,
+            rgba(255, 189, 57, 0.8) 50%,
+            rgba(255, 189, 57, 0.4) 80%,
+            transparent);
+}
+
+/* Don't add separator after the last section (contact) */
+section:last-of-type::after,
+#contact-section::after {
+    display: none;
+}
+
+/* Add extra padding to sections for better spacing */
+section {
+    padding-bottom: 80px;
+    margin-bottom: 0;
+}
+
+/* Decorative dot in the center of separator */
+section::before {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 8px;
+    background: #ffbd39;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 189, 57, 0.5);
+    z-index: 1;
+}
+
+/* Dark mode dot */
+body.dark-mode section::before {
+    background: #ffbd39;
+    box-shadow: 0 0 15px rgba(255, 189, 57, 0.8);
+}
+
+/* Hide dot for last section */
+section:last-of-type::before,
+#contact-section::before {
+    display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    section::after {
+        width: 90%;
+    }
+
+    section {
+        padding-bottom: 60px;
+    }
+}
